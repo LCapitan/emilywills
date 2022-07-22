@@ -33,9 +33,9 @@ export function KeyFeature({
       <div className='container'>
         <div className={styles.inner}>
           <div className={styles.details}>
-            <div className={styles.title}>
+            <div className={styles.blockHeading}>
               <span className={styles.featNum}>{tag}</span>
-              <h2 className={styles.blockHeading}>
+              <h2 className={styles.title}>
                 {title}
               </h2>
             </div>

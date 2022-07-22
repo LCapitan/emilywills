@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500;600;700&family=Playfair+Display:wght@400;900&display=swap');
 
 @import "./styles/variables.scss";
 @import "./styles/breakpoints.scss";
@@ -108,7 +108,8 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 900;
+  font-weight: 700;
+  font-family: $title;
 }
 
 body,

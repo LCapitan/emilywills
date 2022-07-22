@@ -50,7 +50,7 @@ export function FullWidthContent({
           {tag &&
             <span className={styles.tagline}>{tag}</span>
           }
-          <h2 className={styles.blockHeading}>
+          <h2 className={styles.title}>
             {title}
           </h2>
           <div className={styles.content}>

@@ -29,7 +29,7 @@ export function SplitContent({
           </figure>
           <div className={styles.details}>
             <div className={styles.wrapper}>
-              <h2 className={styles.blockHeading}>
+              <h2 className={styles.title}>
                 {title}
               </h2>
               <div className={styles.content}>

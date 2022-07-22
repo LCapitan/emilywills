@@ -35,37 +35,11 @@
 
     h2 {
       color: #ffffff;
-      font-family: $title;
       font-size: 55px;
       line-height: 55px;
       margin: 0;
       position: relative;
       top: -30px;
-    }
-
-    .popUp {
-      font-family: $copy;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 36px;
-      position: relative;
-    }
-
-    @include md-max {
-      h2 {
-        margin-bottom: 15px;
-      }
-
-      .popUp {
-        max-height: none;
-        opacity: 1;
-      }
-
-      .tags {
-        span {
-          background: rgba($sand, 0.3);
-        }
-      }
     }
   }
 
