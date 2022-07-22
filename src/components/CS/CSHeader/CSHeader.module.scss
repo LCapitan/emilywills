@@ -202,68 +202,125 @@
       }
     }
   }
+}
 
-  &.process {
-    background: $navy;
+.process {
+  background: $navy;
+  padding: 0;
+
+  .caseStudyHeader {
     padding-bottom: 200px;
-    max-width: none;
     left: 0;
     width: 100%;
+  }
 
-    .workCta {
-      margin-bottom: 75px;
+  .workCta {
 
-      .linkArrow {
+    .linkArrow {
+      color: rgba($creme, .5);
+
+      .arrow {
+        svg {
+          path {
+            stroke: $creme;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: rgba($creme, 1);
+      }
+    }
+
+    .csLink {
+      color: $creme;
+    }
+  }
+
+  h1 {
+    color: $creme;
+  }
+
+  .inner {
+    .content {
+      color: $creme;
+    }
+  }
+
+  .rightRail {
+    border-left: 1.5px solid rgba($creme, .05);
+    align-items: center;
+
+    @include lg-max {
+      border-top: 1.5px solid rgba($creme, .15);
+      border-left: none;
+    }
+
+    .rightRailItem {
+      color: $creme;
+      width: 100%;
+
+      .itemTitle {
         color: rgba($creme, .5);
+        display: block;
+        font-weight: 300;
+        margin-bottom: 25px;
+      }
 
-        .arrow {
-          svg {
-            path {
-              stroke: $creme;
+      .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+
+        li {
+          width: calc(33.333% - 15px);
+
+          a {
+            font-weight: 600;
+            position: relative;
+            text-transform: capitalize;
+
+            &:after {
+              background: $creme;
+              content: '';
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              width: 0;
+              height: 2px;
+              transition: .25s ease;
+            }
+
+            &:visited {
+
+              &:after {
+                width: 0;
+              }
+            }
+
+            &:hover {
+              cursor: pointer;
+
+              &:after {
+                width: 100%;
+              }
             }
           }
         }
-
-        &:hover,
-        &:focus {
-          color: rgba($creme, 1);
-        }
-      }
-
-      .csLink {
-        color: $creme;
       }
     }
 
-    h1 {
-      color: $creme;
-    }
-
-    .inner {
-      .content {
-        color: $creme;
-      }
-    }
-
-    .rightRail {
-      border-left: 1.5px solid rgba($creme, .05);
-      align-items: center;
-
-      @include lg-max {
-        border-top: 1.5px solid rgba($creme, .15);
-        border-left: none;
-      }
+    @include md-max {
+      margin-top: 15px;
+      width: 100%;
 
       .rightRailItem {
-        color: $creme;
-        width: 100%;
-
-        .itemTitle {
-          color: rgba($creme, .5);
-          display: block;
-          font-weight: 300;
-          margin-bottom: 25px;
-        }
+        margin-bottom: 25px;
 
         .navigation {
           display: flex;
@@ -274,70 +331,15 @@
           padding: 0;
 
           li {
-            width: calc(33.333% - 15px);
+            width: calc(50% - 15px);
 
             a {
-              font-weight: 600;
-              position: relative;
-              text-transform: capitalize;
-
               &:after {
-                background: $creme;
-                content: '';
-                display: block;
-                position: absolute;
-                left: 0;
-                bottom: -5px;
-                width: 0;
-                height: 2px;
-                transition: .25s ease;
-              }
-
-              &:visited {
-
-                &:after {
-                  width: 0;
-                }
+                width: 100%;
               }
 
               &:hover {
                 cursor: pointer;
-
-                &:after {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      @include md-max {
-        margin-top: 15px;
-        width: 100%;
-
-        .rightRailItem {
-          margin-bottom: 25px;
-
-          .navigation {
-            display: flex;
-            flex-wrap: wrap;
-            list-style-type: none;
-            gap: 15px;
-            margin: 0;
-            padding: 0;
-
-            li {
-              width: calc(50% - 15px);
-
-              a {
-                &:after {
-                  width: 100%;
-                }
-
-                &:hover {
-                  cursor: pointer;
-                }
               }
             }
           }
@@ -345,19 +347,25 @@
       }
     }
   }
+}
 
 
-  @include lg-max {
+@include lg-max {
+  .caseStudyHeader {
     height: auto;
     position: relative;
     padding: 150px 0 50px;
   }
+}
 
-  @include md-max {
+@include md-max {
+  .caseStudyHeader {
     padding: 120px 0 55px;
     height: auto;
     position: relative;
+  }
 
+  .container {
     &.process {
       padding-bottom: 100px;
     }

@@ -39,8 +39,8 @@ export function CSHeader({
   return (
     <>
       {process ? (
-        <div className={cx(styles.caseStudyHeader, process && styles.process)}>
-          <div className='container'>
+        <div className={cx(styles.container, process && styles.process)}>
+          <div className={cx(styles.caseStudyHeader)}>
             <div className={styles.workCta}>
               <Link href="/work">
                 <span className={styles.linkArrow}>
