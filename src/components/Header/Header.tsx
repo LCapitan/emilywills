@@ -13,11 +13,17 @@ import styles from './Header.module.scss'
 export function Header() {
   const { menuOpen, setMenuOpen } = useContext(UIContext);
 
+  function closeMenu() {
+    if (menuOpen) {
+      setMenuOpen(!menuOpen);
+    }
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.innerWrapper}>
         <Link href="/" passHref>
-          <div onClick={() => setMenuOpen(!menuOpen)} className={styles.logo}>
+          <div onClick={closeMenu} className={styles.logo}>
             <Logo />
           </div>
         </Link>
