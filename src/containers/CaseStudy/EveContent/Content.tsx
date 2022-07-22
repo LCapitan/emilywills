@@ -4,7 +4,8 @@ import {
   SplitContent,
   FullWidthContent,
   SectionHeading,
-  KeyFeature
+  KeyFeature,
+  VideoPlayer
 } from '../../../components/index';
 
 export function Content() {
@@ -104,6 +105,10 @@ export function Content() {
       >
         <p>Eve is designed with connection in mind, allowing you to share your completed end-of-life plans with those you trust to carry them out. Based on the plan you choose, Eve has additional features like the ability to safely upload and store important documents to keep everything central while further reducing one&#39;s carbon footprint. Some additional offerings include budget keeping, doula pairing, photo storing, and prompted questions to pass down stories for generations to come.</p>
       </KeyFeature>
+
+      <SectionHeading title='Eve Promotional Video' />
+
+      <VideoPlayer vidSrc='https://res.cloudinary.com/austinmel/video/upload/v1651202379/Eve-Video_nsbzbr.mp4' />
     </>
   )
 }
