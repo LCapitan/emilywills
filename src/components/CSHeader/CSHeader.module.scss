@@ -1,0 +1,306 @@
+@import "./styles/variables.scss";
+@import "./styles/breakpoints.scss";
+
+.caseStudyHeader {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 95vh;
+  gap: 75px;
+  max-width: 1200px;
+  padding-bottom: 150px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  @include lg-max {
+    height: 95vh;
+  }
+
+  @include md-max {
+    padding-top: 120px;
+    height: auto;
+    position: relative;
+  }
+
+  .workCta {
+    .csLinkArrow {
+      color: rgba($creme, .5);
+      display: inline-block;
+      font-family: $copy;
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+      transition: .25s;
+
+      &:hover,
+      &:focus {
+        color: rgba($creme, 1);
+        cursor: pointer;
+      }
+    }
+
+    .linkArrow {
+      color: rgba($sand, .5);
+      display: inline-block;
+      font-family: $copy;
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+      transition: .25s;
+
+      .arrow {
+        position: absolute;
+        top: 5px;
+        left: -50%;
+        opacity: 0;
+        width: 35px;
+        transition: .25s;
+
+        svg {
+          width: 30px;
+
+          path {
+            stroke: $sand;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: rgba($sand, 1);
+        cursor: pointer;
+
+        .arrow {
+          opacity: 1;
+          left: -100%;
+        }
+      }
+    }
+
+    .csLink {
+      color: $sand;
+      font-size: 18px;
+      text-transform: lowercase;
+      opacity: .5;
+    }
+  }
+
+  h1 {
+    color: $olive;
+    font-family: $title;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 100px;
+    margin: 0 0 20px;
+
+    @include md-max {
+      font-size: 75px;
+      margin: 0 0 25px;
+    }
+  }
+
+  .inner {
+    display: flex;
+    gap: 75px;
+
+    @include md-max {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .csDetails {
+      flex: 1;
+    }
+
+    .content {
+      color: $olive;
+    }
+
+    .tags {
+      display: none;
+      margin-top: 50px;
+
+      span {
+        background: $sand;
+        border-radius: 100px;
+        color: $creme;
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        padding: 15px 30px;
+      }
+    }
+  }
+
+  .actions {
+    padding-top: 45px;
+  }
+
+  .hr {
+    display: block;
+    margin-bottom: 75px;
+  }
+
+  .rightRail {
+    border-left: 1.5px solid rgba($sand, .15);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    font-family: $copy;
+    padding: 25px 0 25px 55px;
+    width: 525px;
+
+    @include vp-max(935) {
+      width: 100%;
+    }
+
+    @include md-max {
+      border-top: 1.5px solid rgba($sand, .15);
+      border-left: none;
+      padding: 55px 0 25px 0;
+    }
+
+    .rightRailItem {
+      color: $sand;
+      width: calc(50% - 35px);
+
+      span {
+        display: block;
+      }
+
+      .itemTitle {
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+
+    @include md-max {
+      margin-top: 15px;
+      width: 100%;
+
+      .rightRailItem {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &.process {
+    background: $navy;
+    padding-bottom: 200px;
+    max-width: none;
+    width: 100%;
+
+    .workCta {
+      margin-bottom: 75px;
+
+      .linkArrow {
+        color: rgba($creme, .5);
+
+        .arrow {
+          svg {
+            path {
+              stroke: $creme;
+            }
+          }
+        }
+
+        &:hover,
+        &:focus {
+          color: rgba($creme, 1);
+        }
+      }
+
+      .csLink {
+        color: $creme;
+      }
+    }
+
+    h1 {
+      color: $creme;
+    }
+
+    .inner {
+      .content {
+        color: $creme;
+      }
+    }
+
+    .rightRail {
+      border-left: 1.5px solid rgba($creme, .15);
+
+      @include md-max {
+        border-top: 1.5px solid rgba($creme, .15);
+      }
+
+      .rightRailItem {
+        color: $creme;
+        width: 100%;
+
+        .itemTitle {
+          color: rgba($creme, .5);
+          display: block;
+          font-weight: 300;
+          margin-bottom: 25px;
+        }
+
+        .navigation {
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          gap: 15px;
+          margin: 0;
+          padding: 0;
+
+          li {
+            width: calc(33.333% - 15px);
+
+            a {
+              font-weight: 600;
+              position: relative;
+              text-transform: capitalize;
+
+              &:after {
+                background: $creme;
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0;
+                height: 2px;
+                transition: .25s ease;
+              }
+
+              &:visited {
+
+                &:after {
+                  width: 0;
+                }
+              }
+
+              &:hover {
+                cursor: pointer;
+
+                &:after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @include md-max {
+        margin-top: 15px;
+        width: 100%;
+
+        .rightRailItem {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

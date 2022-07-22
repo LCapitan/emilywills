@@ -1,0 +1,133 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.AboutContent {
+  padding: 150px 0;
+  position: relative;
+
+  @include md-max {
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-family: $title;
+    font-size: 12rem;
+    line-height: 1;
+    opacity: 0.07;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 1;
+
+    @include vp-max(1400) {
+      font-size: 10rem;
+    }
+
+    @include vp-max(1300) {
+      font-size: 8rem;
+      top: 0;
+    }
+
+    @include vp-max(1200) {
+      font-size: 8rem;
+    }
+
+    @include md-max {
+      color: $sand;
+      font-size: 55px;
+      margin-bottom: 50px;
+      opacity: 1;
+      position: relative;
+      top: 0;
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+
+    @include md-max {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .contentWrapperFlipped {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 75px;
+    position: relative;
+    z-index: 2;
+
+    @include md-max {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .image {
+    border-radius: 10px;
+    flex: 1;
+    overflow: hidden;
+    max-width: 450px;
+
+    @include md-max {
+      width: 100%;
+    }
+  }
+
+  .homeContentCopy {
+    flex: 1;
+
+    p {
+      color: $sand;
+    }
+
+    .name {
+      color: $pink;
+      display: block;
+      font-family: $title;
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 73px;
+    }
+  }
+
+  .actions {
+    margin-top: 45px;
+
+    @include sm-max {
+      margin-top: 25px;
+    }
+
+    a {
+      background: $sand;
+      border-radius: 100px;
+      color: $creme;
+      display: inline-block;
+      font-weight: 500;
+      padding: 15px 45px;
+      transition: 0.25s ease;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.05);
+      }
+
+      @include sm-max {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

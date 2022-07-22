@@ -1,0 +1,85 @@
+@import "./styles/variables.scss";
+@import "./styles/breakpoints.scss";
+
+.twoColImage {
+  display: flex;
+  gap: 50px;
+  margin: 25px 0;
+
+  .image {
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  @include lg-max {
+    margin: 15px 0;
+  }
+
+  @include md-max {
+    flex-direction: column;
+  }
+}
+
+.imageContent {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 150px 0 150px;
+
+  @include lg-max {
+    margin: 0;
+  }
+
+  .image {
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+
+    @include lg-max {
+      width: 100%;
+    }
+  }
+
+  .content {
+    width: 400px;
+
+    @include lg-max {
+      width: 100%;
+    }
+
+    h3 {
+      color: $pink;
+      font-family: $copy;
+      font-size: 18px;
+    }
+
+    h4 {
+      color: $sand;
+      font-family: $title;
+      font-size: 20px;
+    }
+  }
+
+  @include lg-max {
+    flex-direction: column;
+    gap: 15px;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  &.flipped {
+    flex-direction: row-reverse;
+
+    @include lg-max {
+      flex-direction: column;
+      gap: 15px;
+
+      .image {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,318 @@
+@import "./styles/variables.scss";
+@import "./styles/breakpoints.scss";
+
+.csWrapper {
+  background: $creme;
+  margin-top: 95vh;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+
+  @include lg-max {
+    margin-top: 100vh;
+  }
+
+  @include md-max {
+    margin-top: 0;
+  }
+}
+
+.backButton {
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 95;
+  transition: .25s ease;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.blockWrapper {
+  background: $creme;
+  position: relative;
+  z-index: 4;
+
+  @include md-max {
+    margin-top: 0 !important;
+  }
+}
+
+.stickyref {
+  width: 100%;
+  height: 1px;
+
+  @include md-max {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.stickySpacer {
+  display: block;
+
+  @include md-max {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.heading {
+  padding: 75px 0 50px;
+
+  h2 {
+    color: $pink;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.childHeading {
+  padding: 0 0 25px;
+
+  h2 {
+    color: $pink;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  padding: 50px 0;
+  position: relative;
+  z-index: 2;
+
+  h2 {
+    color: $pink;
+    font-family: $copy;
+    font-size: 22px;
+    margin-top: 0;
+    margin-right: 20px;
+    text-align: right;
+    width: 175px;
+    position: relative;
+
+    &:after {
+      background: $sand;
+      content: '';
+      display: block;
+      opacity: .5;
+      position: absolute;
+      top: 20px;
+      right: -55px;
+      transform: rotate(-55deg);
+      width: 60px;
+      height: 1px;
+    }
+
+    @include md-max {
+      text-align: left;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  h3 {
+    color: $sand;
+    font-family: $copy;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .image {
+    border-radius: 10px;
+    flex: 1;
+    overflow: hidden;
+    max-width: 450px;
+
+    @include md-max {
+      width: 100%;
+    }
+  }
+
+  .homeContentCopy {
+    flex: 1;
+
+    p {
+      color: $sand;
+    }
+
+    .name {
+      color: $pink;
+      display: block;
+      font-family: $title;
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 73px;
+    }
+  }
+
+  @include md-max {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.contentWrapperFlipped {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 50px 0;
+  gap: 75px;
+  position: relative;
+  z-index: 2;
+
+  h2 {
+    color: $pink;
+    font-family: $copy;
+    font-size: 22px;
+    margin-top: 0;
+    margin-right: 20px;
+    text-align: right;
+    width: 175px;
+    position: relative;
+
+    &:after {
+      background: $sand;
+      content: '';
+      display: block;
+      opacity: .5;
+      position: absolute;
+      top: 20px;
+      right: -55px;
+      transform: rotate(-55deg);
+      width: 60px;
+      height: 1px;
+    }
+
+    @include md-max {
+      text-align: left;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  h3 {
+    color: $sand;
+    font-family: $copy;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .image {
+    border-radius: 10px;
+    flex: 1;
+    overflow: hidden;
+    max-width: 450px;
+
+    @include md-max {
+      width: 100%;
+    }
+  }
+
+  .homeContentCopy {
+    flex: 1;
+
+    p {
+      color: $sand;
+    }
+
+    .name {
+      color: $pink;
+      display: block;
+      font-family: $title;
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 73px;
+    }
+  }
+
+  @include md-max {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.content {
+  p {
+    color: $sand;
+    font-family: $copy;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.divider {
+  background: $sand;
+  margin: 50px 0 50;
+  opacity: .25;
+  width: 100%;
+  height: 1px;
+}
+
+.bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    color: $sand;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 10px 0;
+  }
+}
+
+.actions {
+  margin-top: 45px;
+
+  @include sm-max {
+    margin-top: 25px;
+  }
+
+  a {
+    background: $sand;
+    border-radius: 100px;
+    color: $creme;
+    display: inline-block;
+    font-weight: 500;
+    padding: 15px 45px;
+    transition: 0.25s ease;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    @include sm-max {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.vidWrapper {
+  margin-top: 125px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba($sand, 0.2);
+}

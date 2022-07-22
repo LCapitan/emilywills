@@ -1,0 +1,104 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.button {
+  border: 1.5px solid $sand;
+  border-radius: 50px;
+  display: inline-block;
+  font-family: $title;
+  font-size: 18px;
+  line-height: 18px;
+  // font-weight: $bold;
+  position: relative;
+  padding: 15px 35px;
+  text-align: center;
+  transition: .25s ease;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+
+    @include sm-max {
+      transform: scale(1);
+    }
+  }
+}
+
+.primary {
+  border: 1.5px solid $sand;
+  color: $sand;
+
+  &:hover,
+  &:focus {
+    border: 1.5px solid $olive;
+    background: $olive;
+    color: $creme;
+  }
+
+  @include sm-max {}
+}
+
+.secondary {
+  border: 1.5px solid $sand;
+  background: $sand;
+  color: $creme;
+
+  &:hover,
+  &:focus {
+    border: 1.5px solid $olive;
+    background: $olive;
+  }
+
+  @include sm-max {}
+}
+
+.buttonArrow {
+  border: 1.5px solid $sand;
+  color: $sand;
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  font-family: $copy;
+  font-size: 18px;
+  line-height: 34px;
+  opacity: 1;
+  padding: 15px 80px 15px 30px;
+  position: relative;
+  transition: .25s;
+
+  .arrow {
+    opacity: 1;
+    position: absolute;
+    top: 45%;
+    right: 30px;
+    transform: translateY(-50%);
+    transition: .25s;
+    height: 20px;
+
+    svg {
+      transform: rotate(180deg);
+      position: relative;
+      width: 30px;
+
+      path {
+        stroke: $sand;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    .arrow {
+      right: 10px;
+
+      svg {
+        path {
+          stroke: $creme;
+        }
+      }
+    }
+  }
+}

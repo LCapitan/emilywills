@@ -1,0 +1,122 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.workContent {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 50px 0 30px;
+  position: relative;
+  width: 100%;
+
+  @include lg-max {
+    padding: 100px 0;
+    display: block;
+  }
+
+  .pageHeading {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 35%;
+    z-index: 2;
+
+    @include lg-max {
+      margin-bottom: 50px;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateY(0);
+      width: 100%;
+    }
+
+    .pageTitle {
+      color: $sand;
+      font-family: $title;
+      font-size: 95px;
+      line-height: 1;
+      margin: 0 0 25px;
+
+      @include lg-max {
+        font-size: 65px;
+      }
+    }
+
+    .subtitle {
+      color: $sand;
+      font-family: $copy;
+      font-size: 18px;
+      // font-weight: $light;
+      line-height: 32px;
+    }
+
+    .actions {
+      margin-top: 30px;
+
+      @include lg-max {
+        display: none;
+      }
+
+      @include sm-max {
+        width: 100%;
+
+        :global {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  >.actions {
+    display: none;
+    margin-top: 30px;
+
+    @include lg-max {
+      display: block;
+    }
+
+    @include sm-max {
+      width: 100%;
+
+      :global {
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .workList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 50%;
+    z-index: 5;
+
+    @include lg-max {
+      flex-direction: column;
+      gap: 35px;
+      margin: 0 -35px 0 0;
+      width: 100%;
+    }
+
+    li {
+      border-radius: 15px;
+      width: 100%;
+
+      @include lg-max {
+        width: 100%;
+      }
+    }
+
+    @include sm-max {
+      margin-bottom: 0;
+    }
+  }
+}

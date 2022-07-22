@@ -1,0 +1,156 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.footer {
+  background: $navy;
+  padding: 100px 0 100px;
+  position: relative;
+  z-index: 100;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include sm-max {
+      flex-direction: column;
+    }
+  }
+
+  .contact {
+    color: $creme;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      display: inline-block;
+      opacity: .25;
+    }
+
+    a {
+      color: $creme;
+      font-size: 20px;
+      line-height: 34px;
+      opacity: .25;
+      transition: .25s ease;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    @include sm-max {
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 50px;
+
+      .contact {
+        >div {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .nameMark {
+    color: $creme;
+    font-family: $title;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+    opacity: .25;
+
+    span {
+      display: block;
+    }
+  }
+
+  .quote {
+    color: $creme;
+    font-family: $copy;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 75px 0;
+    opacity: .25;
+    text-align: center;
+
+    @include md-max {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .sitemap {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 50px;
+
+    @include sm-max {
+      flex-direction: column;
+    }
+
+    li {
+      margin: 0 15px;
+
+      @include sm-max {
+        margin: 5px 0;
+        text-align: center;
+      }
+
+      span {
+        color: $creme;
+        opacity: .25;
+        font-size: 20px;
+        font-weight: 500;
+        transition: .25s ease;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .socialMenu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 25px 0;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        opacity: .25;
+        transition: .25s ease;
+
+        svg {
+          fill: $creme;
+          width: 25px;
+          height: auto;
+        }
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        a {
+          svg {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}

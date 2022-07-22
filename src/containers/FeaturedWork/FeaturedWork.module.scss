@@ -1,0 +1,90 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.featuredWork {
+  padding: 150px 0;
+  position: relative;
+
+  @include md-max {
+    padding: 100px 0;
+  }
+
+  h1 {
+    color: $sand;
+    font-family: $copy;
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0 0 100px;
+    opacity: 1;
+    position: relative;
+    text-align: center;
+
+    @include md-max {
+      font-size: 35px;
+      margin: 0 0 50px;
+    }
+  }
+
+  .workList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    list-style-type: none;
+    margin: 0 -35px 0 0;
+    padding: 0;
+
+    li {
+      border-radius: 15px;
+      width: calc(50% - 35px);
+
+      >* {
+        transform: rotate(0) !important;
+      }
+    }
+
+    @include md-max {
+      flex-direction: column;
+      margin: 0;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: 75px;
+    text-align: center;
+    width: 100%;
+
+    @include sm-max {
+      margin-top: 25px;
+    }
+
+    a {
+      background: $sand;
+      border-radius: 100px;
+      color: $creme;
+      display: inline-block;
+      font-weight: 500;
+      padding: 15px 45px;
+      transition: 0.25s ease;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.05);
+      }
+
+      @include sm-max {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

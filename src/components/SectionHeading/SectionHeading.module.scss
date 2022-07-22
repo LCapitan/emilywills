@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.sectionHeading {
+  padding: 150px 0 50px;
+  margin: 0 auto;
+  width: 100%;
+
+  .title {
+    color: $olive;
+    font-size: 70px;
+    line-height: 82px;
+    text-align: center;
+  }
+}

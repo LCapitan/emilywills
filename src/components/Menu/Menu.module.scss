@@ -1,0 +1,72 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 125px;
+  width: 100%;
+
+  @include md-max {
+    padding: 0 50px;
+  }
+
+  @include sm-max {
+    padding: 0 40px;
+  }
+}
+
+.menu {
+  background: $navy;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s ease;
+
+  &.open {
+    left: 0;
+  }
+
+  .nav {
+    list-style-type: none;
+    width: 100%;
+
+    li {
+      @include sm-max {
+        text-align: right;
+      }
+
+      a {
+        color: $creme;
+        font-family: $title;
+        font-size: 4rem;
+        font-weight: 600;
+        opacity: 0.5;
+        padding: 15px 0;
+        position: relative;
+        transition: 0.5s ease;
+
+        &:hover,
+        &:focus {
+          font-size: 12rem;
+          opacity: 1;
+        }
+
+        @include sm-max {
+
+          &:hover,
+          &:focus {
+            font-size: 4rem;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,154 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @include md-max {
+    margin-top: 100px;
+    min-height: none;
+    padding-bottom: 100px;
+  }
+
+  h1 {
+    // @include font-size(35px, 13rem);
+    // @include font-size(35px, 13rem, 320px, 960px);
+    font-size: 13rem;
+    color: $pink;
+    font-family: $name;
+    line-height: 1;
+    margin: 0;
+
+    @include vp-max(1200) {
+      font-size: 10rem;
+    }
+
+    @include vp-max(1000) {
+      font-size: 8rem;
+    }
+
+    @include md-max {
+      font-size: 6rem;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .namePhoto {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .image {
+      flex: 1;
+      margin-bottom: -20px;
+      width: 30vw;
+    }
+
+    @include md-max {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    @include sm-max {
+      .image {
+        width: 200px;
+      }
+    }
+  }
+
+  .intro {
+    color: $navy;
+    display: inline-block;
+    font-family: $copy;
+    font-size: 22px;
+    padding-left: 50px;
+    opacity: 0.25;
+
+    @include md-max {
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .heroContent {
+    @include md-max {
+      width: 100%;
+    }
+
+    .content {
+      @include md-max {
+        width: 100%;
+      }
+    }
+  }
+
+  .heroSub {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 100px 0 0;
+      padding: 0 10%;
+      list-style-type: none;
+      width: 100%;
+
+      @include md-max {
+        flex-direction: column;
+        // align-items: flex-start;
+        // justify-content: flex-start;
+        padding: 0 20px;
+      }
+
+      li {
+        color: $sand;
+        font-family: $copy;
+        font-size: 22px;
+        position: relative;
+
+        >span {
+          position: relative;
+          display: block;
+          width: 8px;
+          height: 8px;
+
+          &:after {
+            background: $sand;
+            border-radius: 10px;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+          }
+        }
+
+        @include vp-max(1200) {
+          font-size: 18px;
+        }
+
+        @include md-max {
+          span {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
