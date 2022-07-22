@@ -126,6 +126,60 @@
 
   // responsive ========================
 
+  @include vp-max(1400) {
+    .img {
+      right: -300px;
+    }
+
+    &.flipped {
+      .img {
+        left: -420px;
+      }
+    }
+
+    &.moreText {
+      .img {
+        right: -500px;
+      }
+    }
+  }
+
+  @include xl-max {
+    .img {
+      width: 900px;
+    }
+
+    &.flipped {
+      .img {
+        width: 900px;
+      }
+    }
+
+    &.moreText {
+      .img {
+        top: -50px;
+      }
+    }
+  }
+
+  @include vp-max(1100) {
+    .img {
+      right: -400px;
+    }
+
+    &.flipped {
+      .img {
+        left: -500px;
+      }
+    }
+
+    &.moreText {
+      .img {
+        right: -550px;
+      }
+    }
+  }
+
   @include lg-max {
     min-height: 100vh;
     max-height: none;
@@ -142,11 +196,11 @@
     .img {
       position: relative;
       top: auto;
-      bottom: -50px;
+      bottom: 0;
       right: 100px;
       transform: rotate(-15deg);
       overflow: hidden;
-      width: 200%;
+      width: 150%;
       height: 500px;
     }
 
@@ -172,12 +226,44 @@
         max-width: none;
         width: 100%;
       }
+
+      .img {
+        bottom: -120px;
+        left: -100px;
+        height: 700px;
+        width: 125%;
+      }
     }
 
     &.moreText {
+      min-height: 0;
+      height: auto;
+
       .img {
         top: auto;
+        bottom: -150px;
         right: 100px;
+        height: 800px;
+        width: 120%;
+        margin-top: -200px;
+      }
+    }
+  }
+
+  @include sm-max {
+    .img {
+      bottom: -50px;
+    }
+
+    &.moreText {
+
+      .img {
+        bottom: -150px;
+        right: 0;
+        height: 800px;
+        width: 120%;
+        margin-top: -200px;
+        margin-bottom: -200px;
       }
     }
   }
