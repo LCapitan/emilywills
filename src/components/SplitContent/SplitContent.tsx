@@ -1,7 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
-import cx from "classnames";
 
+// styles
 import styles from './SplitContent.module.scss'
 
 interface SplitContentProps {
@@ -13,14 +12,14 @@ interface SplitContentProps {
   children?: any
 }
 
-const SplitContent: React.FC<SplitContentProps> = ({
+export function SplitContent({
   imgSrc,
   width,
   height,
   altText,
   title,
   children
-}) => {
+}: SplitContentProps) {
   return (
     <div className={styles.splitContent}>
       <div className='container'>
@@ -43,5 +42,3 @@ const SplitContent: React.FC<SplitContentProps> = ({
     </div>
   )
 }
-
-export default SplitContent;

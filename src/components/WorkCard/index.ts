@@ -1,1 +1,1 @@
-export { default as WorkCard } from './WorkCard'
+export * from './WorkCard'

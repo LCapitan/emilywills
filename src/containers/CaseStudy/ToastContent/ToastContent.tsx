@@ -19,18 +19,23 @@ const HavenContent = () => {
 
       <div className={styles.csWrapper}>
         <CSHeader
-          title="Totally Toast"
-          tags={[
-            'branding',
-            'product design',
-            'photography',
+          title='Totally Toast'
+          overview='A passion project centered around my love for toast.'
+          forWhat='Student Project 2020'
+          timeline='8 Weeks'
+          tools={[
+            'Figma',
+            'Illustrator',
+            'Photoshop',
+            'After Effects'
           ]}
-          forWhat='Passion Project'
-          timeline='4 weeks'
-          tools='Illustrator, Photoshop, Photography'
-          role='Branding, Product Design, Toast Enthusiast'>
-          <p>A passion project centered around my love for toast.</p>
-        </CSHeader>
+          roles={[
+            'Branding',
+            'Product Design',
+            'Photography'
+          ]}
+          btnUrl="/work/eve-planning/process"
+        />
 
         <div className={styles.divider}></div>
 

@@ -1,1 +1,1 @@
-export { default as EveContent } from "./EveContent";
+export * from "./EveContent";

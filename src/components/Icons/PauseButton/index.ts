@@ -1,1 +1,1 @@
-export { default as PauseButton } from './PauseButton'
+export * from './PauseButton'

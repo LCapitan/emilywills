@@ -1,1 +1,1 @@
-export { default as Twitter } from './Twitter'
+export * from './Twitter'

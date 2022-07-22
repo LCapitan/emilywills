@@ -1,4 +1,4 @@
-const Forward = () => {
+export function Forward() {
   return (
     <svg width="38" height="41" viewBox="0 0 38 41" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fillRule="evenodd" clipRule="evenodd" d="M2 2L29 20.5L2 39V2ZM36 2H32V39H36V2Z" fill="black" />
@@ -6,5 +6,3 @@ const Forward = () => {
     </svg>
   )
 }
-
-export default Forward;

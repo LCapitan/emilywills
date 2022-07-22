@@ -2,11 +2,11 @@
 @import "../../../styles/breakpoints.scss";
 
 .featuredWork {
-  padding: 150px 0;
+  padding: 150px 0 0;
   position: relative;
 
   @include md-max {
-    padding: 100px 0;
+    padding: 100px 0 0;
   }
 
   h1 {

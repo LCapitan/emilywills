@@ -1,7 +1,7 @@
-import Link from "next/link";
 import classnames from "classnames";
 import Image from "next/image";
 
+// styles
 import styles from './TwoColImg.module.scss'
 
 interface TwoColImgProps {
@@ -18,7 +18,7 @@ interface TwoColImgProps {
   imgHeight?: string
 }
 
-const TwoColImg: React.FC<TwoColImgProps> = ({
+export function TwoColImg({
   weird,
   flipped,
   imgSrc,
@@ -30,7 +30,7 @@ const TwoColImg: React.FC<TwoColImgProps> = ({
   imgAlt2,
   imgWidth,
   imgHeight
-}) => {
+}: TwoColImgProps) {
   return (
     <>
       {title &&
@@ -59,5 +59,3 @@ const TwoColImg: React.FC<TwoColImgProps> = ({
     </>
   )
 }
-
-export default TwoColImg;

@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Parallax } from 'react-scroll-parallax';
 import { WorkCard } from "../../components";
 
 import styles from './FunContent.module.scss';

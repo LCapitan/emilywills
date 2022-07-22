@@ -44,17 +44,19 @@
 
       a {
         color: $creme;
+        display: inline-block;
         font-family: $title;
         font-size: 4rem;
         font-weight: 600;
         opacity: 0.5;
-        padding: 15px 0;
+        margin: 25px 0;
+        padding: 25px 0;
         position: relative;
         transition: 0.5s ease;
 
         &:hover,
         &:focus {
-          font-size: 12rem;
+          font-size: 10rem;
           opacity: 1;
         }
 

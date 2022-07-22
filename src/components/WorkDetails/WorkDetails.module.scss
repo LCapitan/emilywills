@@ -1,0 +1,59 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/breakpoints.scss";
+
+.title {
+  color: $sand;
+  font-family: $title;
+  font-size: 80px;
+  line-height: 1;
+  margin: 0 0 15px;
+
+  @include lg-max {
+    font-size: 65px;
+  }
+}
+
+.subtitle {
+  color: $sand;
+  font-family: $copy;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+.tags {
+  border-top: 1.5px solid rgba($olive, .1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 35px 0 0 -25px;
+  padding: 35px 0 0 25px;
+
+  span {
+    background: rgba($sand, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px 15px;
+    transition: .35s ease-in-out;
+  }
+
+  @include sm-max {
+    margin: 35px 0 0;
+    padding: 35px 0 0;
+  }
+}
+
+.actions {
+  margin-top: 20px;
+
+  @include sm-max {
+    width: 100%;
+
+    :global {
+      a {
+        width: 100%;
+      }
+    }
+  }
+}

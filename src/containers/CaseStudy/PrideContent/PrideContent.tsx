@@ -20,16 +20,21 @@ const HavenContent = () => {
       <div className={styles.csWrapper}>
         <CSHeader
           title="3M pride"
-          tags={[
-            'ui/ux',
-            'environmental design',
-          ]}
           forWhat='3M Pride Month'
           timeline='3 weeks'
-          tools='Illustrator, Photoshop'
-          role='Designer'>
-          <p>Uplifting the voices of the LGBTQ+ community.</p>
-        </CSHeader>
+          tools={[
+            'Figma',
+            'Illustrator',
+            'Photoshop',
+            'After Effects'
+          ]}
+          roles={[
+            'Branding',
+            'UX/UI',
+            'Social Media'
+          ]}
+          overview="Uplifting the voices of the LGBTQ+ community."
+        />
 
         <div className={styles.divider}></div>
 

@@ -1,1 +1,1 @@
-export { default as TwoColImg } from './TwoColImg';
+export * from './TwoColImg';

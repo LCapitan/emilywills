@@ -1,1 +1,1 @@
-export { default as HavenContent } from './HavenContent'
+export * from './HavenContent'

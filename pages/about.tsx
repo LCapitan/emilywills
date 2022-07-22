@@ -11,7 +11,7 @@ const About: NextPage = () => {
   return (
     <>
       {/* <Header/> */}
-      <main className="container">
+      <main>
         <AboutContent />
       </main>
       <Footer />

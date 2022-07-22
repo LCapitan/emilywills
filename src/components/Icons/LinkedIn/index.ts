@@ -1,1 +1,1 @@
-export { default as LinkedIn } from './LinkedIn';
+export * from './LinkedIn';

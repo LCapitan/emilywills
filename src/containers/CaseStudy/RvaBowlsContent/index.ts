@@ -1,1 +1,1 @@
-export { default as RvaBowlsContent } from "./RvaBowlsContent";
+export * from "./RvaBowlsContent";

@@ -1,28 +1,29 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useRef, useState, useEffect } from "react";
-import { VideoPlayer } from '../index';
-
+// styles
 import styles from './WorkCard.module.scss';
 
+// props
 interface WorkCardProps {
   imgSrc: string,
   imgAlt?: string,
   cardLink: string,
-  title: string,
-  content: string,
-  tags: Array<string>
+  title?: string,
+  content?: string,
+  tags?: Array<string>,
+  refId?: any
 }
 
-const WorkCard: React.FC<WorkCardProps> = ({
+export function WorkCard({
   imgSrc,
   imgAlt,
   cardLink,
   title,
   content,
-  tags
-}) => {
+  tags,
+  refId
+}: WorkCardProps) {
 
   return (
     <Link href={cardLink} passHref>
@@ -45,5 +46,3 @@ const WorkCard: React.FC<WorkCardProps> = ({
     </Link>
   )
 }
-
-export default WorkCard;

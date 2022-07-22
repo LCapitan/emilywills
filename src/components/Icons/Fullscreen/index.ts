@@ -1,1 +1,1 @@
-export { default as Fullscreen } from './Fullscreen'
+export * from './Fullscreen'

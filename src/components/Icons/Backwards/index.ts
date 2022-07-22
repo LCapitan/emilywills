@@ -1,1 +1,1 @@
-export { default as Backwards } from './Backwards'
+export * from './Backwards'

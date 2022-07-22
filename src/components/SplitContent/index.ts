@@ -1,1 +1,1 @@
-export { default as SplitContent } from './SplitContent'
+export * from './SplitContent'

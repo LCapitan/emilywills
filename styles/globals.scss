@@ -19,8 +19,47 @@ body {
   height: auto;
   z-index: 3;
 
-  @include md-max {
+  @include lg-max {
     position: relative;
+  }
+}
+
+.backButton {
+  background: rgba($navy, .25);
+  backdrop-filter: blur(25px);
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 95;
+  text-align: center;
+  transition: .25s ease;
+  width: 65px;
+  height: 75px;
+
+  svg {
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    transform: rotate(90deg);
+    transform-origin: center center;
+
+    path {
+      stroke: $creme;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background: rgba($navy, .75);
+    cursor: pointer;
+  }
+
+  &.showBackButton {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -35,7 +74,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 0 50px;
 
   @include xl-max {
@@ -44,7 +83,10 @@ body {
   }
 
   @include lg-max {
-    width: 100%;
+    padding: 0 50px;
+  }
+
+  @include md-max {
     padding: 0 30px;
   }
 }
@@ -91,4 +133,22 @@ a {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@include lg-max {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
 }

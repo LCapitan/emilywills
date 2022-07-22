@@ -1,17 +1,13 @@
-import { useClickOutside } from "@mantine/hooks";
 import classnames from "classnames";
 import Link from "next/link";
 import React, { useContext } from 'react';
 import UIContext from "../../context/UIContext";
-import Hamburger from "../Header/HamburgerButton";
-import Image from "next/image";
 
+// Styles
 import styles from './Menu.module.scss'
 
 export default function Menu() {
   const { menuOpen, setMenuOpen } = useContext(UIContext);
-  // const ref = useClickOutside(() => setMenuOpen(false));
-  // console.log(menuOpen);
 
   return (
     <nav className={classnames(styles.menu, menuOpen && styles.open)}>

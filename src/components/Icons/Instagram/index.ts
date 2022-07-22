@@ -1,1 +1,1 @@
-export { default as Instagram } from './Instagram'
+export * from './Instagram'

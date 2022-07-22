@@ -1,16 +1,17 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
+// components
 import { HonsBunsContent } from '../../src/containers/CaseStudy';
-
-import styles from '../../styles/Work.module.scss';
+import { Footer } from '../../src/components';
 
 const HonsBuns: NextPage = () => {
   return (
     <>
-      <main className="container">
+      <main>
         <HonsBunsContent />
       </main>
+
+      <Footer />
     </>
   )
 }

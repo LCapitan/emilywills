@@ -8,15 +8,13 @@ interface FullWidthImageProps {
   imgAlt: string
 }
 
-const FullWidthImage: React.FC<FullWidthImageProps> = ({
+export function FullWidthImage({
   imgSrc,
   imgAlt
-}) => {
+}: FullWidthImageProps) {
   return (
     <div className={styles.fullWidthImage}>
       <Image src={imgSrc} width="1200" height="600" alt={imgAlt} layout="responsive" />
     </div>
   )
 }
-
-export default FullWidthImage;

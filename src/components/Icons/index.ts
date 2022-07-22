@@ -5,6 +5,7 @@ export * from "./Forward";
 export * from "./Fullscreen";
 export * from "./Instagram";
 export * from "./LinkedIn";
+export * from "./Logo";
 export * from "./PauseButton";
 export * from "./PlayButton";
 export * from "./PlayTriangle";

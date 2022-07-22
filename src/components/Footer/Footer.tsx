@@ -1,11 +1,12 @@
-import Link from "next/link";
-import React, { useContext } from 'react';
+import React from 'react';
+
+// components
 import { LinkedIn, Instagram, Twitter, Facebook } from '../Icons'
 
+// styles
 import styles from './Footer.module.scss';
 
-const Footer = () => {
-
+export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -45,5 +46,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer;

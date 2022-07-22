@@ -1,0 +1,84 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/breakpoints.scss";
+
+.keyFeature {
+  overflow: hidden;
+  padding: 100px 0;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  &.flipped {
+    background: rgba($olive, .1);
+
+    .inner {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+
+  .img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 350px;
+  }
+
+  .details {
+    flex: 1;
+    max-width: 685px;
+  }
+
+  .featNum {
+    color: rgba($olive, .35);
+    display: block;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  .blockHeading {
+    color: $olive;
+    font-family: $title;
+    font-size: 55px;
+    line-height: 63px;
+    margin: 0 0 25px;
+    position: relative;
+
+    @include md-max {
+      font-size: 35px;
+      line-height: 50px;
+      text-align: left;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    color: $sand;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  @include lg-max {
+
+    .inner {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+
+    &.flipped {
+      .inner {
+        flex-direction: column;
+        // justify-content: flex-end;
+      }
+    }
+  }
+}

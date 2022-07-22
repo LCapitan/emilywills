@@ -1,1 +1,1 @@
-export { default as HonsBunsContent } from "./HonsBunsContent";
+export * from "./HonsBunsContent";

@@ -2,16 +2,9 @@
 @import "../../../styles/breakpoints.scss";
 
 .wrapper {
-  border-radius: 15px;
-  box-shadow: 0px 10px 30px rgba(#000000, 0.5);
-  transform: rotate(-8deg);
+  box-shadow: 0px 10px 30px rgba(#000000, 0.15);
   margin: 45px 0;
   transition: transform .5s ease;
-
-  &:hover,
-  &:focus {
-    transform: rotate(6deg);
-  }
 
   @include lg-max {
     transform: rotate(0deg);
@@ -25,25 +18,8 @@
 }
 
 .workItem {
-  border-radius: 15px;
   overflow: hidden;
   position: relative;
-
-  &:after {
-    // background: linear-gradient(to top, black, transparent);
-    background: radial-gradient(circle at top center, transparent 30%, black);
-    border-radius: 15px;
-    content: '';
-    display: block;
-    opacity: 0.85;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 175%;
-    height: 175%;
-    z-index: 1;
-    transition: .25s ease;
-  }
 
   .content {
     color: #ffffff;
@@ -68,28 +44,6 @@
       font-weight: 500;
       line-height: 36px;
       position: relative;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 25px -5px 0;
-
-      span {
-        background: rgba(black, 0.3);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border-radius: 100px;
-        display: inline-block;
-        font-size: 14px;
-        padding: 8px 20px;
-        transition: .35s ease-in-out;
-      }
-
-      @include sm-max {
-        display: none;
-      }
     }
 
     @include md-max {

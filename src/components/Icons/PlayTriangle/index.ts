@@ -1,1 +1,1 @@
-export { default as PlayTriangle } from './PlayTriangle'
+export * from './PlayTriangle'

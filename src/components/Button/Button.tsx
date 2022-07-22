@@ -1,24 +1,27 @@
 import Link from 'next/link';
 import cx from 'classnames';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+// components
+import { Arrow } from '../Icons';
 
 // styles
 import styles from './Button.module.scss';
 
-import { Arrow } from '../Icons';
-
-// const styleClass = ['primary', 'secondary'];
-
+// props
 interface ButtonProps {
-  label: string;
+  label?: string;
   url?: string;
   secondary?: boolean;
   className?: string;
   onClick?: any;
   external?: boolean;
   arrow?: boolean;
+  backButton?: boolean;
+  white?: boolean;
 }
 
-export function Button({ label, url, secondary, onClick, className, external, arrow }: ButtonProps) {
+export function Button({ label, url, secondary, onClick, className, external, arrow, backButton, white }: ButtonProps) {
 
   if (url && external) {
     return (
@@ -28,9 +31,9 @@ export function Button({ label, url, secondary, onClick, className, external, ar
     );
   } else if (url && arrow) {
     return (
-      <a href={url} className={cx(styles.buttonArrow, secondary ? styles.secondary : styles.primary)}>
+      <a href={url} className={cx(styles.button, styles.arrow, secondary ? styles.secondary : styles.primary, white && styles.white)}>
         {label}
-        <span className={styles.arrow}>
+        <span className={styles.icon}>
           <Arrow />
         </span>
       </a>
@@ -41,6 +44,15 @@ export function Button({ label, url, secondary, onClick, className, external, ar
         {label}
       </a>
     );
+  } else if (backButton) {
+    return (
+      <AnchorLink href="#top" offset="">
+        <div className={cx('backButton', className)}>
+          <Arrow />
+          <span className='srOnly'>scroll to top</span>
+        </div>
+      </AnchorLink>
+    )
   } else {
     return (
       <button

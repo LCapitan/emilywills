@@ -1,0 +1,157 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/breakpoints.scss";
+
+.fullWidthContent {
+  background: rgba($olive, .1);
+  overflow: hidden;
+  padding: 200px 0;
+  position: relative;
+
+  .img {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -30px;
+    right: -200px;
+    transform: rotate(-15deg);
+    width: 1000px;
+    height: 100%;
+  }
+
+  .inner {
+    max-width: 480px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .tagline {
+    color: rgba($olive, .35);
+    display: block;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  .blockHeading {
+    color: $olive;
+    font-family: $copy;
+    font-size: 55px;
+    line-height: 63px;
+    margin: 0 0 25px;
+    position: relative;
+    z-index: 2;
+
+    @include md-max {
+      text-align: left;
+      font-size: 35px;
+      line-height: 50px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    max-width: 480px;
+    z-index: 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .actions {
+    padding-top: 45px;
+  }
+
+  &.bgOlive {
+    background: $olive;
+
+    .tagline,
+    .blockHeading,
+    .content {
+      color: $creme;
+    }
+  }
+
+  &.bgSand {
+    background: $sand;
+
+    .tagline {
+      color: rgba($creme, .5);
+    }
+
+    .blockHeading,
+    .content {
+      color: $creme;
+    }
+  }
+
+  &.flipped {
+    position: relative;
+
+    .img {
+      right: auto;
+      left: -300px;
+      transform: rotate(15deg);
+    }
+
+    .inner {
+      margin-left: auto;
+      max-width: 560px;
+    }
+
+    .content {
+      max-width: 560px;
+    }
+  }
+
+  &.moreText {
+    position: relative;
+
+    .img {
+      top: -175px;
+      right: -400px;
+    }
+
+    .inner {
+      max-width: 700px;
+    }
+
+    .content {
+      max-width: 700px;
+    }
+  }
+
+  // responsive ========================
+
+  @include lg-max {
+    height: 100vh;
+    max-height: none;
+    overflow: hidden;
+    padding: 100px 0 0;
+
+    :global {
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    .img {
+      position: relative;
+      top: auto;
+      bottom: -50px;
+      right: 100px;
+      transform: rotate(-15deg);
+      overflow: hidden;
+      width: 200%;
+      height: 500px;
+    }
+
+    .inner {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

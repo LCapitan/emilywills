@@ -1,1 +1,1 @@
-export { default as Facebook } from './Facebook'
+export * from './Facebook'

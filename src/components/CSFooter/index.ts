@@ -1,1 +1,0 @@
-export { default as CSFooter } from './CSFooter'

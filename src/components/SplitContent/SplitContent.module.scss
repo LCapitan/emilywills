@@ -36,6 +36,8 @@
     position: relative;
 
     @include md-max {
+      font-size: 35px;
+      line-height: 50px;
       text-align: left;
 
       &:after {
@@ -49,6 +51,19 @@
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+
+  @include lg-max {
+
+    .inner {
+      flex-direction: column-reverse;
+    }
+
+    .details {
+      .wrapper {
+        padding-left: 0;
+      }
     }
   }
 }
