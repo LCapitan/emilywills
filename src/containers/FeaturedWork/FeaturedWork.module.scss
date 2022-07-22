@@ -20,7 +20,8 @@
     text-align: center;
 
     @include md-max {
-      font-size: 35px;
+      font-size: 45px;
+      line-height: 60px;
       margin: 0 0 50px;
     }
   }
