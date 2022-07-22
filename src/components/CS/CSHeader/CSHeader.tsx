@@ -84,7 +84,7 @@ export function CSHeader({
           </div>
         </div>
       ) : (
-        <div className='container'>
+        <div className={styles.container}>
           <div className={cx(styles.caseStudyHeader, process && styles.process)}>
             <div className={styles.workCta}>
               <Link href="/work">

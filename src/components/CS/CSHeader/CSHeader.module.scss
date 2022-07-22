@@ -1,6 +1,29 @@
 @import "../../../../styles/variables.scss";
 @import "../../../../styles/breakpoints.scss";
 
+.container {
+  width: 100%;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+
+  @include xl-max {
+    padding: 0 30px;
+  }
+
+  @include lg-max {
+    padding: 0 50px;
+  }
+
+  @include md-max {
+    padding: 0 30px;
+  }
+
+  @include lg-max {
+    position: relative;
+  }
+}
+
 .caseStudyHeader {
   display: flex;
   justify-content: flex-end;
@@ -9,9 +32,9 @@
   gap: 75px;
   max-width: 1200px;
   padding: 0 50px 120px;
-  position: fixed;
+  position: relative;
+  margin: 0 auto;
   top: 0;
-  // left: calc((100vw - 1200px) / 2);
   z-index: 1;
 
   .workCta {
