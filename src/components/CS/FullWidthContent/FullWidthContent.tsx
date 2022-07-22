@@ -5,7 +5,7 @@ import cx from "classnames";
 import { Button } from '../../Button';
 
 // styles
-import styles from './fullWidthContent.module.scss'
+import styles from './FullWidthContent.module.scss'
 
 interface FullWidthContentProps {
   imgSrc: string;
