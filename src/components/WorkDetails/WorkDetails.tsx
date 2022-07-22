@@ -12,6 +12,7 @@ interface WorkDetailsProps {
   tags?: Array<string>;
   url: string;
   label?: string;
+  secondary?: boolean;
 }
 
 export function WorkDetails({
@@ -20,7 +21,8 @@ export function WorkDetails({
   subTitle,
   tags,
   url,
-  label
+  label,
+  secondary
 }: WorkDetailsProps) {
 
   return (
@@ -28,12 +30,21 @@ export function WorkDetails({
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.subtitle}>{subTitle}</div>
       <div className={styles.actions}>
-        <Button
-          arrow
-          secondary
-          url={url}
-          label={label}
-        />
+        {secondary ? (
+          <Button
+            arrow
+            secondary
+            url={url}
+            label={label}
+          />
+        ) : (
+          <Button
+            arrow
+            url={url}
+            label={label}
+          />
+        )
+        }
       </div>
       <div className={styles.tags}>
         {tags && tags.map((tag, i) =>

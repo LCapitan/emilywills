@@ -11,7 +11,7 @@
 
   .wrapper {
     position: fixed;
-    bottom: 15%;
+    top: 35%;
     left: 10%;
     width: 32%;
     z-index: 2;
@@ -24,14 +24,17 @@
   .workDetails {
     opacity: 0;
     position: absolute;
-    bottom: 0;
+    top: 75px;
     left: 0;
     transition: .5s ease;
     z-index: -1;
 
     &.show {
       opacity: 1;
+      top: 0;
       z-index: 90;
+      transition: .75s ease;
+      transition-delay: .25s;
     }
   }
 
@@ -39,7 +42,7 @@
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 50px;
     padding: 0;
     position: relative;
     width: 50%;
@@ -49,9 +52,12 @@
       padding: 75px 0;
       position: relative;
       left: 0;
-      transform: scale(1) rotate(-8deg);
-      transition: .75s ease;
       width: 100%;
+
+      .cardContainer {
+        transform: scale(1) rotate(-8deg);
+        transition: 1s ease;
+      }
 
       &:first-child {
         padding-top: 25px;
@@ -62,12 +68,17 @@
       }
 
       &.inView {
-        transform: scale(1.02) rotate(8deg);
+        .cardContainer {
+          transform: scale(1.02) rotate(8deg);
+        }
+
       }
 
       &:hover,
       &:focus {
-        transform: scale(1.02) rotate(2deg);
+        .cardContainer {
+          transform: scale(1.05) rotate(2deg);
+        }
       }
     }
   }
@@ -105,13 +116,34 @@
     }
 
     .workDetails {
-      margin-top: 45px;
+      margin-top: 0;
       opacity: 1;
+      padding: 0 30px;
       position: relative;
       bottom: auto;
       left: 0;
       width: 100%;
       z-index: 90;
+    }
+  }
+
+  @include sm-max {
+    padding: 0 0 150px;
+
+    .workDetails {
+      padding: 0;
+    }
+
+    .workList {
+      .workPiece {
+        &:first-child {
+          padding-top: 0
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
     }
   }
 }

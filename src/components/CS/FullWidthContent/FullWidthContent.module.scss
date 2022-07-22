@@ -3,6 +3,7 @@
 
 .fullWidthContent {
   background: rgba($olive, .1);
+  // background-color: $navy;
   overflow: hidden;
   padding: 200px 0;
   position: relative;
@@ -126,7 +127,7 @@
   // responsive ========================
 
   @include lg-max {
-    height: 100vh;
+    min-height: 100vh;
     max-height: none;
     overflow: hidden;
     padding: 100px 0 0;
@@ -152,6 +153,32 @@
     .inner {
       max-width: none;
       width: 100%;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: none;
+      width: 100%;
+    }
+
+    &.flipped {
+      .inner {
+        max-width: none;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .content {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    &.moreText {
+      .img {
+        top: auto;
+        right: 100px;
+      }
     }
   }
 }

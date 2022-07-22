@@ -61,6 +61,11 @@ body {
     opacity: 1;
     visibility: visible;
   }
+
+  @include sm-max {
+    bottom: 30px;
+    right: 30px;
+  }
 }
 
 .quote {

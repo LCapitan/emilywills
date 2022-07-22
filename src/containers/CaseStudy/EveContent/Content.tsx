@@ -89,7 +89,7 @@ export function Content() {
       <KeyFeature
         tag="05"
         title='Access to live resources'
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1657854242/onboarding_jqvdxh.png'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658522858/05-live-resources_ghchct.png'
         altText=''
       >
         <p>With a premium plan, users have access to live resources such as death doulas, who can offer additional guidance and emotional support in areas surrounding their own death, a loved ones death, or navigating grief. Users will also be able to connect with companies based on proximity that offer greener funeral alternatives.</p>
@@ -99,7 +99,7 @@ export function Content() {
         flipped
         tag="06"
         title='Designed for connection'
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1657854242/onboarding_jqvdxh.png'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658522858/06-connection_ezgxka.png'
         altText=''
       >
         <p>Eve is designed with connection in mind, allowing you to share your completed end-of-life plans with those you trust to carry them out. Based on the plan you choose, Eve has additional features like the ability to safely upload and store important documents to keep everything central while further reducing one&#39;s carbon footprint. Some additional offerings include budget keeping, doula pairing, photo storing, and prompted questions to pass down stories for generations to come.</p>

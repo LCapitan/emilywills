@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import UIContext from '../../context/UIContext';
 import Link from 'next/link';
 
 // components
@@ -10,12 +11,13 @@ import { Logo } from '../Icons';
 import styles from './Header.module.scss'
 
 export function Header() {
+  const { menuOpen, setMenuOpen } = useContext(UIContext);
 
   return (
     <header className={styles.header}>
       <div className={styles.innerWrapper}>
-        <Link href="/">
-          <div className={styles.logo}>
+        <Link href="/" passHref>
+          <div onClick={() => setMenuOpen(!menuOpen)} className={styles.logo}>
             <Logo />
           </div>
         </Link>

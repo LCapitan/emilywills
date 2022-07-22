@@ -3,10 +3,14 @@
 
 .moodboard {
   position: relative;
+  height: 100vh;
 
   .img {
     margin: 0;
     padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   .inner {
@@ -25,5 +29,31 @@
     font-size: 55px;
     line-height: 75px;
     margin: 0 0 25px;
+  }
+
+  @include lg-max {
+    height: auto;
+
+    .inner {
+      box-shadow: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      padding: 40px 30px 35px;
+      text-align: center;
+      max-width: none;
+      width: 100%;
+    }
+
+    .title {
+      font-size: 35px;
+      line-height: 50px;
+    }
+
+    .img {
+      width: 100%;
+      height: 300px;
+    }
   }
 }

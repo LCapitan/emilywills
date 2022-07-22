@@ -3,9 +3,14 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 125px;
+  max-width: none;
+  padding: 0;
+  position: relative;
   width: 100%;
+
+  @include lg-max {
+    padding: 0 100px;
+  }
 
   @include md-max {
     padding: 0 50px;
@@ -34,10 +39,46 @@
   }
 
   .nav {
+    display: flex;
     list-style-type: none;
+    position: relative;
     width: 100%;
 
+    @include lg-max {
+      display: block;
+    }
+
     li {
+      position: absolute;
+      top: 50%;
+
+      &:first-child {
+        left: 25%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-child(2) {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:last-child {
+        left: 75%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include lg-max {
+        position: relative;
+        top: auto;
+
+        &:first-child,
+        &:nth-child(2),
+        &:last-child {
+          left: auto;
+          transform: translate(0, 0);
+        }
+      }
+
       @include sm-max {
         text-align: right;
       }
@@ -49,7 +90,6 @@
         font-size: 4rem;
         font-weight: 600;
         opacity: 0.5;
-        margin: 25px 0;
         padding: 25px 0;
         position: relative;
         transition: 0.5s ease;

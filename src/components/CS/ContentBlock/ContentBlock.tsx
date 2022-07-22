@@ -2,6 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import cx from "classnames";
 
+// components
+import { Button } from '../../Button';
+
 // styles
 import styles from './ContentBlock.module.scss'
 
@@ -19,6 +22,8 @@ interface ContentBlockProps {
   captionTitle?: string;
   row?: boolean;
   flipped?: boolean;
+  url?: string;
+  label?: string;
 }
 
 export function ContentBlock({
@@ -33,7 +38,9 @@ export function ContentBlock({
   caption,
   captionTitle,
   row,
-  flipped
+  flipped,
+  url,
+  label
 }: ContentBlockProps) {
 
   return (
@@ -46,6 +53,9 @@ export function ContentBlock({
             <h3>{subtitle}</h3>
             {children}
           </div>
+          {url && <div className={styles.actions}>
+            <Button arrow url={url} label={label} />
+          </div>}
         </div>
 
         {imgSrc &&

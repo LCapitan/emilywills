@@ -35,6 +35,14 @@
     margin-bottom: 15px;
   }
 
+  .actions {
+    margin-top: 45px;
+
+    @include sm-max {
+      margin-top: 25px;
+    }
+  }
+
   .img {
     margin: 75px 0 0;
     padding: 0;
@@ -118,7 +126,7 @@
     }
 
     &.split {
-      flex-direction: column-reverse;
+      flex-direction: column;
       gap: 50px;
 
       .img {
@@ -127,8 +135,12 @@
       }
 
       &.flipped {
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
     }
+  }
+
+  @include sm-max {
+    padding: 45px 0 25px;
   }
 }

@@ -14,8 +14,8 @@ const AboutContent = () => {
       <h1 className="srOnly">about</h1>
       <ContentBlock
         row
-        tag="Hi"
-        title="I&#39;m Emily"
+        tag="Hi,"
+        title="I&#39;m Emily :)"
         imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1658490967/em-1_mumhic.jpg"
         width="584"
         height="608"
@@ -29,16 +29,11 @@ const AboutContent = () => {
         imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1658490967/em-2_ty7rvz.jpg"
         width="584"
         height="608"
+        label="see my work"
+        url="/work"
       >
         <p>As a storyteller, an entrepreneur, and an experience designer, I leverage the stories and experiences of myself and others to tackle big problems and create meaningful solutions that aim to leave the greatest impact possible. Empathy is my superpower and I use it to understand what is and is not working for people today so that I can design for a better tomorrow.</p>
-
         <p>In my free time I love eating toast, carrying my bunnies around in socks, playing tennis, and discovering my problems aren&#39;t real problems while scrolling through Reddit.</p>
-
-        <Button
-          arrow
-          label="see my work"
-          url="/work"
-        />
       </ContentBlock>
     </div>
   );

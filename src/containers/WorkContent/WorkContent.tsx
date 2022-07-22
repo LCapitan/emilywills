@@ -103,6 +103,7 @@ const WorkContent = () => {
                   'machine learning',
                   'human-centered design'
                 ]}
+                secondary
                 url="/work/eve-planning"
                 label="view case study"
               />
@@ -118,6 +119,7 @@ const WorkContent = () => {
                   'strategy',
                   'human-centered design'
                 ]}
+                secondary
                 url="/work/haven"
                 label="view project"
               />
@@ -135,6 +137,7 @@ const WorkContent = () => {
                   'illustration',
                   'accessibility',
                 ]}
+                secondary
                 url="/work/honsbuns"
                 label="view project"
               />
@@ -150,6 +153,7 @@ const WorkContent = () => {
                   'branding',
                   'web design'
                 ]}
+                secondary
                 url="/work/rvabowls"
                 label="view project"
               />
@@ -158,7 +162,7 @@ const WorkContent = () => {
 
           <ul className={styles.workList}>
             <li className={cx(styles.workPiece, ref1IsInView && !ref2IsInView ? styles.inView : '')}>
-              <div ref={ref1}>
+              <div className={styles.cardContainer} ref={ref1} id="ref1">
                 <WorkCard
                   imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649249335/eveimage_ldqbep.jpg"
                   imgAlt="an illustration of people cleaning up the Earth"
@@ -167,7 +171,7 @@ const WorkContent = () => {
               </div>
             </li>
             <li className={cx(styles.workPiece, ref2IsInView && !ref3IsInView ? styles.inView : '')}>
-              <div ref={ref2}>
+              <div className={styles.cardContainer} ref={ref2} id="ref2">
                 <WorkCard
                   imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649404890/Haven_watches_qknzk9.png"
                   imgAlt="photo of Haven watches"
@@ -176,7 +180,7 @@ const WorkContent = () => {
               </div>
             </li>
             <li className={cx(styles.workPiece, ref3IsInView && !ref4IsInView ? styles.inView : '')}>
-              <div ref={ref3}>
+              <div className={styles.cardContainer} ref={ref3} id="ref3">
                 <WorkCard
                   imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649263364/honsbuns_hxjmxq.jpg"
                   imgAlt="an illustration of beautiful bunny"
@@ -185,7 +189,7 @@ const WorkContent = () => {
               </div>
             </li>
             <li className={cx(styles.workPiece, ref4IsInView ? styles.inView : '')}>
-              <div ref={ref4}>
+              <div className={styles.cardContainer} ref={ref4} id="ref4">
                 <WorkCard
                   imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649267493/rvabowls_yn3zpg.jpg"
                   imgAlt="a photo of an acai bowl from RVA Bowls"

@@ -39,9 +39,7 @@
     justify-content: space-between;
   }
 
-  @include lg-max {
-    padding: 0 50px;
-
+  @include xl-max {
     .logo {
       display: none;
     }
@@ -50,6 +48,10 @@
       display: flex;
       justify-content: flex-end;
     }
+  }
+
+  @include lg-max {
+    padding: 0 50px;
   }
 
   @include md-max {

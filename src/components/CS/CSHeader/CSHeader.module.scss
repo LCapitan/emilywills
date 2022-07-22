@@ -8,7 +8,7 @@
   height: 95vh;
   gap: 75px;
   max-width: 1200px;
-  padding: 0 50px 150px;
+  padding: 0 50px 120px;
   position: fixed;
   top: 0;
   // left: calc((100vw - 1200px) / 2);
@@ -86,7 +86,8 @@
     margin: 0 0 20px;
 
     @include md-max {
-      font-size: 75px;
+      font-size: 55px;
+      line-height: 70px;
       margin: 0 0 25px;
     }
   }
@@ -99,6 +100,7 @@
     @include lg-max {
       flex-direction: column;
       gap: 50px;
+      align-items: flex-start;
     }
 
     .csDetails {
@@ -294,6 +296,29 @@
 
         .rightRailItem {
           margin-bottom: 25px;
+
+          .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+
+            li {
+              width: calc(50% - 15px);
+
+              a {
+                &:after {
+                  width: 100%;
+                }
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -307,8 +332,12 @@
   }
 
   @include md-max {
-    padding-top: 120px;
+    padding: 120px 0 55px;
     height: auto;
     position: relative;
+
+    &.process {
+      padding-bottom: 100px;
+    }
   }
 }

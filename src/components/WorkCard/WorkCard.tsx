@@ -31,15 +31,19 @@ export function WorkCard({
         <div className={styles.workItem}>
           <Image src={imgSrc} width='1200' height='1200' alt={imgAlt} layout='responsive' />
           <div className={styles.content}>
-            <h2>{title}</h2>
-            <div className={styles.popUp}>
-              {content}
-            </div>
-            <div className={styles.tags}>
-              {tags && tags.map((tag, i) =>
-                <span key={tags[i]}>{tag}</span>
-              )}
-            </div>
+            {title && <h2>{title}</h2>}
+            {content &&
+              <div className={styles.popUp}>
+                {content}
+              </div>
+            }
+            {tags &&
+              <div className={styles.tags}>
+                {tags && tags.map((tag, i) =>
+                  <span key={tags[i]}>{tag}</span>
+                )}
+              </div>
+            }
           </div>
         </div>
       </div>

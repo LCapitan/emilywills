@@ -11,8 +11,7 @@ const FeaturedWork = () => {
     <div className={styles.featuredWork}>
 
       <FullWidthContent
-        bgSand
-        btnScnd
+        // btnScnd
         imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1657846546/eve-screens_osozmo.png'
         width='1200'
         height='1372'

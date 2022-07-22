@@ -24,9 +24,11 @@ export function MoodBoard({
 
   return (
     <div className={styles.moodboard}>
-      <figure className={styles.img}>
-        <Image src={imgSrc} width={width} height={height} alt={altText} layout="responsive" />
-      </figure>
+      {imgSrc &&
+        <figure className={styles.img}>
+          <Image src={imgSrc} width={width} height={height} alt={altText} objectFit="cover" layout="fill" />
+        </figure>
+      }
       <div className={styles.inner}>
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.content}>

@@ -39,7 +39,7 @@ export function Footer() {
           </div>
 
           <div className={styles.contact}>
-            <div><a href="mailto:willsee@vcu.edu">willsee@vcu.edu</a></div>
+            <div><a href="mailto:willsee@vcu.edu">get in touch</a></div>
           </div>
         </div>
       </div>

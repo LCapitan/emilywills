@@ -14,7 +14,7 @@ const NoContent: React.FC<NoContentProps> = ({
       <h1>whoops</h1>
 
       <div className={styles.content}>
-        This content isn't available for viewing at the moment, but check back soon for an update!
+        This content isn&#39;t available for viewing at the moment, but check back soon for an update!
       </div>
 
       <div className={styles.actions}>
