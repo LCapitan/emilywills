@@ -48,7 +48,7 @@ export function FullWidthContent({
         </figure>
         <div className={styles.inner}>
           {tag &&
-            <span className={styles.tagline}>{tag}</span>
+            <span className={styles.tag}>{tag}</span>
           }
           <h2 className={styles.title}>
             {title}

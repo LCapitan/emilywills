@@ -47,8 +47,6 @@
     position: relative;
 
     @include md-max {
-      font-size: 45px;
-      line-height: 60px;
       text-align: left;
 
       &:after {

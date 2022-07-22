@@ -25,10 +25,10 @@
     z-index: 2;
   }
 
-  .tagline {
+  .tag {
     color: rgba($olive, .35);
     display: block;
-    font-weight: 900;
+    font-weight: 600;
     margin-bottom: 15px;
   }
 
@@ -42,8 +42,6 @@
 
     @include md-max {
       text-align: left;
-      font-size: 45px;
-      line-height: 60px;
 
       &:after {
         display: none;
