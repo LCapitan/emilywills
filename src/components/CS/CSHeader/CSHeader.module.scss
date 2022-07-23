@@ -9,14 +9,26 @@
 
   @include xl-max {
     padding: 0 30px;
+
+    &.process {
+      padding: 0 30px;
+    }
   }
 
   @include lg-max {
     padding: 0 50px;
+
+    &.process {
+      padding: 0 50px;
+    }
   }
 
   @include md-max {
     padding: 0 30px;
+
+    &.process {
+      padding: 0 30px;
+    }
   }
 
   @include lg-max {
