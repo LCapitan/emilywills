@@ -7,25 +7,18 @@ import styles from './HomeHero.module.scss'
 const HomeHero = () => {
   return (
     <div className={styles.hero}>
+      <h1 className={styles.name}>emily<span>wills</span></h1>
       <div className={styles.heroContent}>
-        <div className={styles.namePhoto}>
-          <div className={styles.content}>
-            <span className={styles.intro}>hello, my name is</span>
-            <h1>emily<span>wills</span></h1>
-          </div>
-          <div className={styles.image}>
-            <Image src="https://res.cloudinary.com/austinmel/image/upload/v1648677838/brown-bunny_1_copy_fw2yk2.png" alt="bunny" width="250" height="250" layout="responsive" />
-          </div>
-        </div>
-        <div className={styles.heroSub}>
-          <ul>
-            <li>experience designer</li>
-            <li><span></span></li>
-            <li>entrepreneur</li>
-            <li><span></span></li>
-            <li>empath</li>
-          </ul>
-        </div>
+        <figure className={styles.image}>
+          <Image src="https://res.cloudinary.com/austinmel/image/upload/v1658544744/brown-bunny_rfztzt.png" alt="bunny" width="600" height="525" layout="fill" objectFit="cover" />
+        </figure>
+      </div>
+      <div className={styles.heroSub}>
+        <ul>
+          <li>experience designer</li>
+          <li>entrepreneur</li>
+          <li>empath</li>
+        </ul>
       </div>
     </div>
   );
