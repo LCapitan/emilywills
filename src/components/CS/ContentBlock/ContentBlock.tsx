@@ -24,6 +24,7 @@ interface ContentBlockProps {
   flipped?: boolean;
   url?: string;
   label?: string;
+  className?: string;
 }
 
 export function ContentBlock({
@@ -40,12 +41,13 @@ export function ContentBlock({
   row,
   flipped,
   url,
-  label
+  label,
+  className
 }: ContentBlockProps) {
 
   return (
     <div className="container">
-      <div className={cx(styles.contentBlock, !title && styles.noTitle, row && styles.split, flipped && styles.flipped)}>
+      <div className={cx(styles.contentBlock, !title && styles.noTitle, row && styles.split, flipped && styles.flipped, className && className)}>
         <div className={styles.details}>
           {tag && <span className={styles.tag}>{tag}</span>}
           {title && <h2 className={styles.title}>{title}</h2>}
