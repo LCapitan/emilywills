@@ -48,20 +48,25 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           }}
         />
         <Header />
-        <LazyMotion features={domAnimation}>
-          <AnimatePresence exitBeforeEnter>
-            <m.div
-              key={router.route.concat(animation.name)}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.7 }}
-            // variants={animation.variants}
-            >
-              <Component {...pageProps} />
-            </m.div>
-          </AnimatePresence>
-        </LazyMotion>
+        {/* <div className='desktop'>
+          <LazyMotion features={domAnimation}>
+            <AnimatePresence exitBeforeEnter>
+              <m.div
+                key={router.route.concat(animation.name)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7 }}
+              >
+                <Component {...pageProps} />
+              </m.div>
+            </AnimatePresence>
+          </LazyMotion>
+        </div> */}
+        {/* <div className='mobile'>
+          <Component {...pageProps} />
+        </div> */}
+        <Component {...pageProps} />
       </>
     </UIContextProvider>
   )

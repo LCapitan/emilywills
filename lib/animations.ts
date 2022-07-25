@@ -63,7 +63,7 @@ const fadeBack = {
     }
   },
   transition: {
-    duration: 0.7
+    duration: 0.25
   }
 };
 
