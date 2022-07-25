@@ -13,7 +13,7 @@ import { Content } from './Content';
 // styles
 import styles from '../CaseStudy.module.scss';
 
-export function HavenContent() {
+export function PrideContent() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [heroHeight, setHeroHeight] = useState(0);
