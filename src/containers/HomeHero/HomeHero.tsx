@@ -1,13 +1,21 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
+// components
+import { Name } from '../../components';
+
+// styles
 import styles from './HomeHero.module.scss'
 
-const HomeHero = () => {
+export function HomeHero() {
   return (
     <div className={styles.hero}>
-      <h1 className={styles.name}>emily<span>wills</span></h1>
+      <h1 className={styles.name}>
+        <span className="srOnly">emily wills</span>
+        <figure className={styles.nameMark}>
+          <Name />
+        </figure>
+      </h1>
       <div className={styles.heroContent}>
         <figure className={styles.image}>
           <Image src="https://res.cloudinary.com/austinmel/image/upload/v1658544744/brown-bunny_rfztzt.png" alt="bunny" width="600" height="525" layout="fill" objectFit="cover" />
@@ -23,5 +31,3 @@ const HomeHero = () => {
     </div>
   );
 }
-
-export default HomeHero;
