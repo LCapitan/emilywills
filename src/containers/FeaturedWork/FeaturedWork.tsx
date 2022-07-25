@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 
-import { Button, FullWidthContent } from "../../components/index";
+// components
+import { FullWidthContent } from "../../components/index";
 
+// styles
 import styles from './FeaturedWork.module.scss';
 
-const FeaturedWork = () => {
+export function FeaturedWork() {
   return (
     <div className={styles.featuredWork}>
 
@@ -25,5 +25,3 @@ const FeaturedWork = () => {
     </div>
   );
 }
-
-export default FeaturedWork;

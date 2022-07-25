@@ -1,1 +1,1 @@
-export { default as EveProcess } from "./EveProcess";
+export * from "./EveProcess";

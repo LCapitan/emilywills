@@ -1,14 +1,9 @@
 import Link from "next/link";
-import classnames from "classnames";
-import Image from "next/image";
 
+// styles
 import styles from './NoContent.module.scss'
 
-interface NoContentProps {
-}
-
-const NoContent: React.FC<NoContentProps> = ({
-}) => {
+export function NoContent() {
   return (
     <div className={styles.noContent}>
       <h1>whoops</h1>
@@ -25,5 +20,3 @@ const NoContent: React.FC<NoContentProps> = ({
     </div>
   )
 }
-
-export default NoContent;

@@ -13,7 +13,7 @@ import { Content } from './Content';
 // styles
 import styles from '../CaseStudy.module.scss';
 
-const HavenContent = () => {
+export function HavenContent() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [heroHeight, setHeroHeight] = useState(0);
@@ -91,5 +91,3 @@ const HavenContent = () => {
     </>
   )
 }
-
-export default HavenContent;

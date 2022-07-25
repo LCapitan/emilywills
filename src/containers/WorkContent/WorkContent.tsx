@@ -9,19 +9,15 @@ import { MobileContent } from "./MobileContent";
 // styles
 import styles from './WorkContent.module.scss';
 
-const WorkContent = () => {
+export function WorkContent() {
   const [ref1IsInView, setRef1IsInView] = useState<boolean>(false);
   const ref1 = useRef<HTMLDivElement | null>(null);
-
   const [ref2IsInView, setRef2IsInView] = useState<boolean>(false);
   const ref2 = useRef<HTMLDivElement | null>(null);
-
   const [ref3IsInView, setRef3IsInView] = useState<boolean>(false);
   const ref3 = useRef<HTMLDivElement | null>(null);
-
   const [ref4IsInView, setRef4IsInView] = useState<boolean>(false);
   const ref4 = useRef<HTMLDivElement | null>(null);
-
   const [ref5IsInView, setRef5IsInView] = useState<boolean>(false);
   const ref5 = useRef<HTMLDivElement | null>(null);
 
@@ -249,5 +245,3 @@ const WorkContent = () => {
     </div>
   );
 }
-
-export default WorkContent;

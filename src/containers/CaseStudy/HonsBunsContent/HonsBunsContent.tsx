@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 
 // components
@@ -86,7 +85,7 @@ export function HonsBunsContent() {
             <CSFooter />
           </div>
         </div>
-      </div >
+      </div>
     </>
   )
 }
