@@ -8,7 +8,7 @@ import styles from '../../styles/Work.module.scss';
 const ThreeM: NextPage = () => {
   return (
     <>
-      <main className="container">
+      <main>
         <PrideContent />
       </main>
     </>

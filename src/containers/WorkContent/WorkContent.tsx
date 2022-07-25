@@ -2,8 +2,11 @@ import React from "react";
 import { useState, useRef, useEffect } from 'react';
 import cx from "classnames";
 
+// components
 import { WorkCard, WorkDetails } from "../../components";
+import { MobileContent } from "./MobileContent";
 
+// styles
 import styles from './WorkContent.module.scss';
 
 const WorkContent = () => {
@@ -19,11 +22,15 @@ const WorkContent = () => {
   const [ref4IsInView, setRef4IsInView] = useState<boolean>(false);
   const ref4 = useRef<HTMLDivElement | null>(null);
 
+  const [ref5IsInView, setRef5IsInView] = useState<boolean>(false);
+  const ref5 = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     const workCard1 = ref1?.current
     const workCard2 = ref2?.current
     const workCard3 = ref3?.current
     const workCard4 = ref4?.current
+    const workCard5 = ref5?.current
 
     const observer1 = new IntersectionObserver(
       ([e]) => {
@@ -49,6 +56,12 @@ const WorkContent = () => {
       }
     )
 
+    const observer5 = new IntersectionObserver(
+      ([e]) => {
+        setRef5IsInView(e.isIntersecting)
+      }
+    )
+
     if (workCard1) {
       observer1.observe(workCard1)
     }
@@ -63,6 +76,10 @@ const WorkContent = () => {
 
     if (workCard4) {
       observer4.observe(workCard4)
+    }
+
+    if (workCard5) {
+      observer5.observe(workCard5)
     }
 
     return (() => {
@@ -81,9 +98,13 @@ const WorkContent = () => {
       if (workCard4) {
         observer4.unobserve(workCard4)
       }
+
+      if (workCard5) {
+        observer5.unobserve(workCard5)
+      }
     })
 
-  }, [ref1, ref2, ref3, ref4])
+  }, [ref1, ref2, ref3, ref4, ref5])
 
   return (
     <div className="container">
@@ -126,6 +147,19 @@ const WorkContent = () => {
 
               <WorkDetails
                 classes={cx(styles.workDetails, ref3IsInView && !ref4IsInView ? styles.show : '')}
+                title="3M Pride"
+                subTitle="3M partners with twin cities pride festival"
+                tags={[
+                  'ui/ux',
+                  'environmental design'
+                ]}
+                secondary
+                url="/work/3m-pride"
+                label="view project"
+              />
+
+              <WorkDetails
+                classes={cx(styles.workDetails, ref4IsInView && !ref5IsInView ? styles.show : '')}
                 title="Hon&#39;s Buns"
                 subTitle="The baddest bunny-themed NFTs on the scene."
                 tags={[
@@ -143,7 +177,7 @@ const WorkContent = () => {
               />
 
               <WorkDetails
-                classes={cx(styles.workDetails, ref4IsInView ? styles.show : '')}
+                classes={cx(styles.workDetails, ref5IsInView ? styles.show : '')}
                 title="RVA Bowls"
                 subTitle="A restaurant, studio, and art gallery that gives back to the local community."
                 tags={[
@@ -182,14 +216,23 @@ const WorkContent = () => {
             <li className={cx(styles.workPiece, ref3IsInView && !ref4IsInView ? styles.inView : '')}>
               <div className={styles.cardContainer} ref={ref3} id="ref3">
                 <WorkCard
+                  imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649404956/3m_ogowpq.png"
+                  imgAlt="a photo of 3M creating their post it note mural"
+                  cardLink="/work/3m-pride"
+                />
+              </div>
+            </li>
+            <li className={cx(styles.workPiece, ref4IsInView && !ref5IsInView ? styles.inView : '')}>
+              <div className={styles.cardContainer} ref={ref4} id="ref4">
+                <WorkCard
                   imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649263364/honsbuns_hxjmxq.jpg"
                   imgAlt="an illustration of beautiful bunny"
                   cardLink="/work/honsbuns"
                 />
               </div>
             </li>
-            <li className={cx(styles.workPiece, ref4IsInView ? styles.inView : '')}>
-              <div className={styles.cardContainer} ref={ref4} id="ref4">
+            <li className={cx(styles.workPiece, ref5IsInView ? styles.inView : '')}>
+              <div className={styles.cardContainer} ref={ref5} id="ref5">
                 <WorkCard
                   imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649267493/rvabowls_yn3zpg.jpg"
                   imgAlt="a photo of an acai bowl from RVA Bowls"
@@ -197,159 +240,11 @@ const WorkContent = () => {
                 />
               </div>
             </li>
-            {/* <li>
-          <div>
-            <WorkCard
-              imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649405756/IMG_3115_doe4qp.jpg"
-              imgAlt="a photo of a piece of a homemade peanut butter and chocolate toast"
-              cardLink="/work/toast"
-              title="totally toast"
-              content="a passion project centered around my love for toast"
-              tags={[
-                'branding',
-                'product design',
-                'photography'
-              ]}
-            />
-          </div>
-        </li> */}
-            {/* <li>
-          <WorkCard
-            imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649404790/cairo_ratyrd.png"
-            imgAlt="a photo of the Cairo Olympics logo prototype"
-            cardLink="/work/cairo"
-            title="cairo olympics"
-            content="olympics for Good"
-            tags={[
-              'branding',
-              'product design',
-              '3D',
-              'experience design',
-              'sustainability'
-            ]}
-          />
-        </li> */}
-            {/* <li>
-          <WorkCard
-            imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649404956/3m_ogowpq.png"
-            imgAlt="a photo of 3M creating their post it note mural"
-            cardLink="/work/3m"
-            title="3M pride"
-            content="3M partners with twin cities pride festival"
-            tags={[
-              'ui/ux',
-              'environmental design'
-            ]}
-          />
-        </li> */}
           </ul>
         </div>
       </div>
       <div className="mobile">
-        <div className={styles.workContent}>
-          <h1 className="srOnly">work</h1>
-          <div className={styles.wrapper}>
-            <ul className={styles.workList}>
-              <li className={cx(styles.workPiece)}>
-                <div>
-                  <WorkCard
-                    imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649249335/eveimage_ldqbep.jpg"
-                    imgAlt="an illustration of people cleaning up the Earth"
-                    cardLink="/work/eve-planning"
-                  />
-
-                  <div className={styles.inner}>
-                    <WorkDetails
-                      classes={cx(styles.workDetails)}
-                      title="Eve"
-                      subTitle="A digital platform that makes the journey for death more approachable and sustainable."
-                      tags={[
-                        'sustainability',
-                        'service design',
-                        'accessibility',
-                        'machine learning',
-                        'human-centered design'
-                      ]}
-                      url="/work/eve-planning"
-                      label="view case study"
-                    />
-                  </div>
-                </div>
-              </li>
-              <li className={cx(styles.workPiece)}>
-                <div>
-                  <WorkCard
-                    imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649404890/Haven_watches_qknzk9.png"
-                    imgAlt="photo of Haven watches"
-                    cardLink="/work/haven"
-                  />
-                  <WorkDetails
-                    classes={cx(styles.workDetails)}
-                    title="Haven"
-                    subTitle="Wearable technology that provides personal safety and peace of mind for young women."
-                    tags={[
-                      'ui/ux',
-                      'product design',
-                      'branding',
-                      'strategy',
-                      'human-centered design'
-                    ]}
-                    url="/work/haven"
-                    label="view project"
-                  />
-                </div>
-              </li>
-              <li className={cx(styles.workPiece)}>
-                <div>
-                  <WorkCard
-                    imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649263364/honsbuns_hxjmxq.jpg"
-                    imgAlt="an illustration of beautiful bunny"
-                    cardLink="/work/honsbuns"
-                  />
-                  <WorkDetails
-                    classes={cx(styles.workDetails)}
-                    title="Hon&#39;s Buns"
-                    subTitle="The baddest bunny-themed NFTs on the scene."
-                    tags={[
-                      'ui/ux',
-                      'web3',
-                      'crypto',
-                      'branding',
-                      'strategy',
-                      'illustration',
-                      'accessibility',
-                    ]}
-                    url="/work/honsbuns"
-                    label="view project"
-                  />
-                </div>
-              </li>
-              <li className={cx(styles.workPiece)}>
-                <div>
-                  <WorkCard
-                    imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649267493/rvabowls_yn3zpg.jpg"
-                    imgAlt="a photo of an acai bowl from RVA Bowls"
-                    cardLink="/work/rvabowls"
-                  />
-                  <WorkDetails
-                    classes={cx(styles.workDetails)}
-                    title="RVA Bowls"
-                    subTitle="A restaurant, studio, and art gallery that gives back to the local community."
-                    tags={[
-                      'ui/ux',
-                      'product design',
-                      'strategy',
-                      'branding',
-                      'web design'
-                    ]}
-                    url="/work/rvabowls"
-                    label="view project"
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <MobileContent />
       </div>
     </div>
   );
