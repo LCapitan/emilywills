@@ -11,7 +11,7 @@ import {
 import { animations } from "../lib/animations"
 
 // components
-import { Header, Footer } from '../src/components'
+import { Header } from '../src/components'
 
 // styles
 import '../styles/globals.scss'
@@ -62,8 +62,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
               </m.div>
             </AnimatePresence>
           </LazyMotion>
-        </div> */}
-        {/* <div className='mobile'>
+        </div>
+        <div className='mobile'>
           <Component {...pageProps} />
         </div> */}
         <Component {...pageProps} />

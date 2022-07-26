@@ -103,7 +103,7 @@ export function WorkContent() {
   }, [ref1, ref2, ref3, ref4, ref5])
 
   return (
-    <div className="container">
+    <>
       <div className="desktop">
         <div className={styles.workContent}>
           <h1 className="srOnly">work</h1>
@@ -239,9 +239,9 @@ export function WorkContent() {
           </ul>
         </div>
       </div>
-      <div className="mobile">
+      <div className="vp-xl">
         <MobileContent />
       </div>
-    </div>
+    </>
   );
 }

@@ -155,12 +155,26 @@ a {
   display: none;
 }
 
+.vp-xl {
+  display: none;
+}
+
 @include lg-max {
   .desktop {
     display: none;
   }
 
   .mobile {
+    display: block;
+  }
+}
+
+@include xl-max {
+  .desktop {
+    display: none;
+  }
+
+  .vp-xl {
     display: block;
   }
 }

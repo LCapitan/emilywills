@@ -6,6 +6,10 @@
   margin: 45px 0;
   transition: transform .5s ease;
 
+  @include xl-max {
+    margin: 0;
+  }
+
   @include lg-max {
     transform: rotate(0deg);
     margin: 0;

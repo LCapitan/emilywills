@@ -15,11 +15,10 @@
   }
 
   h1 {
-    // @include font-size(35px, 13rem);
-    // @include font-size(35px, 13rem, 320px, 960px);
     font-size: 13rem;
     color: $pink;
     font-family: $name;
+    font-weight: 900;
     line-height: 1;
     margin: 0;
 
