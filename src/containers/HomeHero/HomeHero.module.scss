@@ -157,6 +157,8 @@
 
     .image {
       bottom: 150px;
+      left: 45%;
+      transform: translateX(-50%);
     }
 
     .name {
@@ -170,6 +172,12 @@
       svg {
         height: auto;
       }
+    }
+  }
+
+  @include sm-max {
+    .image {
+      bottom: 175px;
     }
   }
 }
