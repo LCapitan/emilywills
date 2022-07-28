@@ -1,3 +1,4 @@
+import cx from "classnames";
 import { useState, useRef, useEffect } from 'react';
 
 // components
@@ -5,6 +6,7 @@ import {
   CSHero,
   CSFooter,
   CSHeader,
+  Button,
   ContentBlock,
   VideoPlayer
 } from '../../../components/index';
@@ -53,6 +55,8 @@ export function HavenContent() {
 
   return (
     <>
+      <Button backButton className={cx(isSticky ? '' : 'showBackButton')} />
+
       <div className={styles.csWrapper}>
         <CSHeader
           rightRail
