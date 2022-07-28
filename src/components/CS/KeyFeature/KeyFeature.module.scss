@@ -11,15 +11,6 @@
     gap: 100px;
   }
 
-  &.flipped {
-    background: rgba($olive, .1);
-
-    .inner {
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-    }
-  }
-
   .img {
     margin: 0;
     padding: 0;
@@ -60,6 +51,31 @@
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+
+  &.bgBeige {
+    background: #CABEB1;
+
+    .title {
+      color: $creme;
+    }
+
+    p {
+      color: $creme;
+    }
+  }
+
+  &.flipped {
+    background: rgba($olive, .1);
+
+    .inner {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    &.bgBeige {
+      background: #CABEB1;
     }
   }
 

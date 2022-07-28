@@ -56,6 +56,7 @@ export function EveContent() {
       <Button backButton className={cx(isSticky ? '' : 'showBackButton')} />
 
       <CSHeader
+        rightRail
         title='Eve Planning'
         overview='Eve is a digital platform designed to make planning for death easier on you, your loved ones, and the earth.'
         forWhat='Independent Project'

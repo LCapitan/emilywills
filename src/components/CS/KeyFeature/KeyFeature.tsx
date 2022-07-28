@@ -6,15 +6,16 @@ import styles from './KeyFeature.module.scss'
 
 // props
 interface KeyFeatureProps {
-  imgSrc: string,
-  tag?: string,
-  altText?: string,
-  title?: string,
-  children?: any,
-  flipped?: boolean
-  width?: string,
-  height?: string,
-  test?: boolean
+  imgSrc: string;
+  tag?: string;
+  altText?: string;
+  title?: string;
+  children?: any;
+  flipped?: boolean;
+  width?: string;
+  height?: string;
+  test?: boolean;
+  bgBeige?: boolean;
 }
 
 export function KeyFeature({
@@ -26,10 +27,11 @@ export function KeyFeature({
   flipped,
   width,
   height,
-  test
+  test,
+  bgBeige
 }: KeyFeatureProps) {
   return (
-    <div className={cx(styles.keyFeature, flipped && styles.flipped, test && styles.test)}>
+    <div className={cx(styles.keyFeature, flipped && styles.flipped, test && styles.test, bgBeige && styles.bgBeige)}>
       <div className='container'>
         <div className={styles.inner}>
           <div className={styles.details}>

@@ -56,6 +56,7 @@ export function PrideContent() {
       <Button backButton className={cx(isSticky ? '' : 'showBackButton')} />
 
       <CSHeader
+        rightRail
         title='3M Pride'
         overview='Eve is a digital platform designed to make planning for death easier on you, your loved ones, and the earth.'
         forWhat='Client Work'

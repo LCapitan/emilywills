@@ -8,6 +8,7 @@ import {
   ContentBlock,
   VideoPlayer
 } from '../../../components/index';
+import { Content } from './Content';
 
 // styles
 import styles from '../CaseStudy.module.scss';
@@ -54,9 +55,9 @@ export function HavenContent() {
     <>
       <div className={styles.csWrapper}>
         <CSHeader
+          rightRail
           title='Haven'
-          overview='Creating wearable technology that provides personal safety for young women while still being fashionable yet incospicuous.'
-          forWhat='Independent project'
+          overview='Creating fashion-forward, wearable technology that provides personal safety and peace of mind for young women.'
           timeline='Ongoing'
           tools={[
             'Figma',
@@ -70,26 +71,27 @@ export function HavenContent() {
             'Branding',
             'UX/UI',
             'Product Design'
-          ]} />
+          ]}
+          teams={[
+            'Emily Wills (XD)',
+            'Gracy Geary (AD)',
+            'Erin Philips (XD)',
+            'Annie Balint (ST)',
+            'Nikki Norris (ID)'
+          ]}
+        />
 
         <div id="top" className={styles.csWrapper}>
           <div ref={heroRef} className={styles.stickyref}></div>
 
           <div ref={heroHeightRef} className={isSticky ? 'unStuckHero' : 'stuckHero'}>
-            <CSHero imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658495563/haven-banner_roeln1.jpg' />
+            <CSHero imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658981185/haven-hero_z079oc.png' />
           </div>
 
           <div className={styles.stickySpacer} style={{ marginTop: isSticky ? '0' : heroHeight }}></div>
 
           <div className={styles.blockWrapper}>
-            <ContentBlock title="Solution Overview">
-              <p>This video is one that I made as an individual project for my visual storytelling class. It sums up my passion for Haven and the reason behind why I founded the company, how it has developed over the years, and what I am looking for to continue pushing it forward.</p>
-
-              <p>I am currently working on a rebrand, so my full case study is not available yet for viewing here. However, feel free to ask me about it if you are interested and I&#39;d be happy to share more in depth of what I’ve been working on! </p>
-            </ContentBlock >
-
-            <VideoPlayer vidSrc='https://res.cloudinary.com/austinmel/video/upload/v1651202258/haven-video_bh5umo.mov' />
-
+            <Content />
             <CSFooter />
           </div>
         </div>

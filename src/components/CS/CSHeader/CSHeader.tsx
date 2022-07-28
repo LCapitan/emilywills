@@ -23,6 +23,8 @@ interface CSHeaderProps {
   csTitle?: string;
   label?: string;
   externalLink?: boolean;
+  teams?: Array<string>;
+  rightRail?: boolean;
 }
 export function CSHeader({
   title,
@@ -38,7 +40,9 @@ export function CSHeader({
   sections,
   csTitle,
   label = "View process",
-  externalLink
+  externalLink,
+  teams,
+  rightRail
 }: CSHeaderProps) {
   return (
     <>
@@ -129,7 +133,7 @@ export function CSHeader({
                 }
               </div>
 
-              {forWhat && (
+              {rightRail && (
                 <div className={styles.rightRail}>
                   {/* Roles */}
                   <div className={styles.rightRailItem}>
@@ -147,6 +151,16 @@ export function CSHeader({
                     )}
                   </div>
 
+                  {/* Team */}
+                  {teams &&
+                    <div className={styles.rightRailItem}>
+                      <span className={styles.itemTitle}>Team</span>
+                      {teams && teams.map((team, i) =>
+                        <span key={teams[i]}>{team}</span>
+                      )}
+                    </div>
+                  }
+
                   {/* Timeline */}
                   <div className={styles.rightRailItem}>
                     <span className={styles.itemTitle}>Timeline</span>
@@ -154,10 +168,12 @@ export function CSHeader({
                   </div>
 
                   {/* For */}
-                  <div className={styles.rightRailItem}>
-                    <span className={styles.itemTitle}>For</span>
-                    <span>{forWhat}</span>
-                  </div>
+                  {forWhat &&
+                    <div className={styles.rightRailItem}>
+                      <span className={styles.itemTitle}>For</span>
+                      <span>{forWhat}</span>
+                    </div>
+                  }
                 </div>
               )}
             </div>

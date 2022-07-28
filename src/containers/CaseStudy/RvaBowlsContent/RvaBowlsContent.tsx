@@ -53,6 +53,7 @@ export function RvaBowlsContent() {
     <>
       <div className={styles.csWrapper}>
         <CSHeader
+          rightRail
           title='RVA Bowls'
           overview='A restaurant + pottery studio + art gallery focused on serving delicious acai and giving back to the RVA community'
           forWhat='Student Project 2020'

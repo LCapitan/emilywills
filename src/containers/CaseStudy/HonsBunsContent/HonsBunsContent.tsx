@@ -53,6 +53,7 @@ export function HonsBunsContent() {
     <>
       <div className={styles.csWrapper}>
         <CSHeader
+          rightRail
           title="Hon&#39;s Buns"
           forWhat='Passion Project'
           timeline='12 weeks'
