@@ -22,6 +22,7 @@ interface CSHeaderProps {
   sections?: Array<string>;
   csTitle?: string;
   label?: string;
+  externalLink?: boolean;
 }
 export function CSHeader({
   title,
@@ -36,7 +37,8 @@ export function CSHeader({
   process,
   sections,
   csTitle,
-  label = "View process"
+  label = "View process",
+  externalLink
 }: CSHeaderProps) {
   return (
     <>
@@ -108,11 +110,21 @@ export function CSHeader({
                 </div>
                 {btnUrl &&
                   <div className={styles.actions}>
-                    <Button
-                      arrow
-                      url={btnUrl}
-                      label={label}
-                    />
+                    {externalLink ? (
+                      <Button
+                        external
+                        arrow
+                        url={btnUrl}
+                        label={label}
+                      />
+                    ) : (
+
+                      <Button
+                        arrow
+                        url={btnUrl}
+                        label={label}
+                      />
+                    )}
                   </div>
                 }
               </div>

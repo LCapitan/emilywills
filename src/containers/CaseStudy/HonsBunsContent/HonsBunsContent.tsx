@@ -70,6 +70,7 @@ export function HonsBunsContent() {
           overview="A collection of 10,000 unique, bunny-themed, NFTs, minting on Ethereum."
           btnUrl='https://www.honsbuns.com/'
           label='visit Hon&#39;s Buns'
+          externalLink
         />
 
         <div id="top" className={styles.csWrapper}>
