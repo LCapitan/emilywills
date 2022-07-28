@@ -1,1 +1,1 @@
-export { default as NoContent } from './NoContent';
+export * from './NoContent';

@@ -1,1 +1,1 @@
-export { default as PrideContent } from './PrideContent';
+export * from './PrideContent';

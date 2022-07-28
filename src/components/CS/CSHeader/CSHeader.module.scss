@@ -9,14 +9,26 @@
 
   @include xl-max {
     padding: 0 30px;
+
+    &.process {
+      padding: 0 30px;
+    }
   }
 
   @include lg-max {
     padding: 0 50px;
+
+    &.process {
+      padding: 0 50px;
+    }
   }
 
   @include md-max {
     padding: 0 30px;
+
+    &.process {
+      padding: 0 30px;
+    }
   }
 
   @include lg-max {
@@ -103,9 +115,9 @@
   h1 {
     color: $olive;
     font-family: $title;
-    font-size: 80px;
-    line-height: 100px;
-    margin: 0;
+    font-size: 75px;
+    line-height: 92px;
+    margin: 0 0 15px;
 
     @include md-max {
       font-size: 65px;
@@ -151,11 +163,6 @@
 
   .actions {
     padding-top: 45px;
-  }
-
-  .hr {
-    display: block;
-    margin-bottom: 75px;
   }
 
   .rightRail {

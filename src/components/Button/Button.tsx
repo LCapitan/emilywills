@@ -31,12 +31,14 @@ export function Button({ label, url, secondary, onClick, className, external, ar
     );
   } else if (url && arrow) {
     return (
-      <a href={url} className={cx(styles.button, styles.arrow, secondary ? styles.secondary : styles.primary, white && styles.white)}>
-        {label}
-        <span className={styles.icon}>
-          <Arrow />
-        </span>
-      </a>
+      <Link href={url} passHref>
+        <div className={cx(styles.button, styles.arrow, secondary ? styles.secondary : styles.primary, white && styles.white)}>
+          {label}
+          <span className={styles.icon}>
+            <Arrow />
+          </span>
+        </div>
+      </Link>
     )
   } else if (url) {
     return (

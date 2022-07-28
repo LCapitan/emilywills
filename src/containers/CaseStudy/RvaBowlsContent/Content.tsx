@@ -1,8 +1,6 @@
 // components
 import {
-  Button,
-  ContentBlock,
-  FullWidthImage
+  ContentBlock
 } from '../../../components/index';
 
 export function Content() {

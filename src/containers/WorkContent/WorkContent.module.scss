@@ -7,7 +7,7 @@
   justify-content: flex-end;
   padding: 50px 0 0;
   position: relative;
-  max-width: 1400px;
+  max-width: 1600px;
 
   .wrapper {
     position: fixed;
@@ -83,8 +83,31 @@
     }
   }
 
-  @include lg-max {
-    padding: 150px 0;
+  @include vp-max (1650) {
+    max-width: 1400px;
+
+    .workList {
+      right: -50px;
+    }
+  }
+
+  @include vp-max (1500) {
+
+    .workList {
+      right: 0;
+    }
+  }
+
+  @include vp-max (1400) {
+    max-width: 1200px;
+
+    .workList {
+      right: 0;
+    }
+  }
+
+  @include xl-max {
+    padding: 0 0 150px;
     display: block;
 
     .workList {
@@ -96,6 +119,10 @@
       .workPiece {
         transform: scale(1) rotate(0deg);
         width: 100%;
+
+        &:first-child {
+          padding-top: 0
+        }
 
         &.inView {
           transform: scale(1) rotate(0deg);

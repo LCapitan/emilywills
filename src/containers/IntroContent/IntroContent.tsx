@@ -1,12 +1,12 @@
 import React from "react";
 
 // components
-import { Button, ContentBlock } from "../../components";
+import { ContentBlock } from "../../components";
 
 // styles
 import styles from './IntroContent.module.scss';
 
-const IntroContent = () => {
+export function IntroContent() {
   return (
     <ContentBlock
       className="intro"
@@ -23,5 +23,3 @@ const IntroContent = () => {
     </ContentBlock>
   );
 }
-
-export default IntroContent;

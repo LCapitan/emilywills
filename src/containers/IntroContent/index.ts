@@ -1,1 +1,1 @@
-export { default as IntroContent } from "./IntroContent";
+export * from "./IntroContent";

@@ -1,11 +1,25 @@
-import '../styles/globals.scss'
 import Head from 'next/head';
-import type { AppProps } from 'next/app'
 import UIContextProvider from '../src/providers/UIContextProvider'
-import { Header, Footer } from '../src/components'
+import { useState } from "react"
+import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo';
+import {
+  AnimatePresence,
+  domAnimation, LazyMotion,
+  m
+} from "framer-motion";
+import { animations } from "../lib/animations"
 
-function MyApp({ Component, pageProps }: AppProps) {
+// components
+import { Header } from '../src/components'
+
+// styles
+import '../styles/globals.scss'
+
+function MyApp({ Component, pageProps, router }: AppProps) {
+  const startIndex = 0;
+  const [animation, setAnimation] = useState(animations[startIndex]);
+  const [exitBefore, setExitBefore] = useState(false);
   return (
     <UIContextProvider>
       <>
@@ -34,6 +48,24 @@ function MyApp({ Component, pageProps }: AppProps) {
           }}
         />
         <Header />
+        {/* <div className='desktop'>
+          <LazyMotion features={domAnimation}>
+            <AnimatePresence exitBeforeEnter>
+              <m.div
+                key={router.route.concat(animation.name)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7 }}
+              >
+                <Component {...pageProps} />
+              </m.div>
+            </AnimatePresence>
+          </LazyMotion>
+        </div>
+        <div className='mobile'>
+          <Component {...pageProps} />
+        </div> */}
         <Component {...pageProps} />
       </>
     </UIContextProvider>

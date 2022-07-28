@@ -1,12 +1,12 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 
+// components
 import { WorkCard } from "../../components";
 
+// styles
 import styles from './FunContent.module.scss';
 
-const FunContent = () => {
+export function FunContent() {
   return (
     <div className={styles.workContent}>
       <div className={styles.title}>
@@ -47,5 +47,3 @@ const FunContent = () => {
     </div>
   );
 }
-
-export default FunContent;
