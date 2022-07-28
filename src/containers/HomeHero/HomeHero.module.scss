@@ -122,8 +122,6 @@
     }
   }
 
-  @include vp-max(1000) {}
-
   @include xl-max {
     .heroContent {
       height: 100vh;
