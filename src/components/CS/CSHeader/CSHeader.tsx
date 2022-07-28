@@ -135,43 +135,49 @@ export function CSHeader({
 
               {rightRail && (
                 <div className={styles.rightRail}>
-                  {/* Roles */}
-                  <div className={styles.rightRailItem}>
-                    <span className={styles.itemTitle}>Role</span>
-                    {roles && roles.map((role, i) =>
-                      <span key={roles[i]}>{role}</span>
-                    )}
-                  </div>
+                  <div className={styles.details}>
+                    {/* Roles */}
+                    <div className={styles.rightRailItem}>
+                      <span className={styles.itemTitle}>Role</span>
+                      {roles && roles.map((role, i) =>
+                        <span key={roles[i]}>{role}</span>
+                      )}
+                    </div>
 
-                  {/* Tools */}
-                  <div className={styles.rightRailItem}>
-                    <span className={styles.itemTitle}>Tools</span>
-                    {tools && tools.map((tool, i) =>
-                      <span key={tools[i]}>{tool}</span>
-                    )}
+                    {/* Tools */}
+                    <div className={styles.rightRailItem}>
+                      <span className={styles.itemTitle}>Tools</span>
+                      {tools && tools.map((tool, i) =>
+                        <span key={tools[i]}>{tool}</span>
+                      )}
+                    </div>
+
+                    {/* Timeline */}
+                    {timeline &&
+                      <div className={styles.rightRailItem}>
+                        <span className={styles.itemTitle}>Timeline</span>
+                        <span>{timeline}</span>
+                      </div>
+                    }
+
+                    {/* For */}
+                    {forWhat &&
+                      <div className={styles.rightRailItem}>
+                        <span className={styles.itemTitle}>For</span>
+                        <span>{forWhat},</span>
+                      </div>
+                    }
                   </div>
 
                   {/* Team */}
                   {teams &&
-                    <div className={styles.rightRailItem}>
+                    <div className={styles.teamList}>
                       <span className={styles.itemTitle}>Team</span>
-                      {teams && teams.map((team, i) =>
-                        <span key={teams[i]}>{team}</span>
-                      )}
-                    </div>
-                  }
-
-                  {/* Timeline */}
-                  <div className={styles.rightRailItem}>
-                    <span className={styles.itemTitle}>Timeline</span>
-                    <span>{timeline}</span>
-                  </div>
-
-                  {/* For */}
-                  {forWhat &&
-                    <div className={styles.rightRailItem}>
-                      <span className={styles.itemTitle}>For</span>
-                      <span>{forWhat}</span>
+                      <div className={styles.teamNames}>
+                        {teams && teams.map((team, i) =>
+                          <span key={teams[i]}>{team}</span>
+                        )}
+                      </div>
                     </div>
                   }
                 </div>

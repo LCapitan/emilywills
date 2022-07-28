@@ -60,7 +60,6 @@ export function HavenContent() {
           rightRail
           title='Haven'
           overview='Creating fashion-forward, wearable technology that provides personal safety and peace of mind for young women.'
-          timeline='Ongoing'
           tools={[
             'Figma',
             'Illustrator',

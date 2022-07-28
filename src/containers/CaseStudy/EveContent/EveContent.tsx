@@ -43,11 +43,18 @@ export function EveContent() {
   }, [heroRef])
 
   useEffect(() => {
+    function handleResize() {
+      if (heroHeightRef?.current?.clientHeight) {
+        setHeroHeight(heroHeightRef.current.clientHeight);
+      }
+    }
+
     if (heroHeightRef?.current?.clientHeight) {
       setHeroHeight(heroHeightRef.current.clientHeight);
-      console.log('height: ', heroHeightRef.current.clientHeight);
-
-      console.log('width: ', heroHeightRef.current.clientWidth);
+      window.addEventListener('resize', handleResize);
+      // console.log('height: ', heroHeightRef.current.clientHeight);
+      // console.log('width: ', heroHeightRef.current.clientWidth);
+      return () => window.removeEventListener('resize', handleResize);
     }
   }, []);
 
