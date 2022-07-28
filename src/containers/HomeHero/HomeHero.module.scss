@@ -105,13 +105,11 @@
 
   // media queries =============================
 
-  @include vp-max(1200) {}
-
-  @include vp-max(1000) {}
-
-  @include xl-max {
-    .heroContent {
-      height: 100vh;
+  @include vp-max(1440) {
+    .nameMark {
+      svg {
+        width: 55%;
+      }
     }
 
     .image {
@@ -121,6 +119,14 @@
       left: 5%;
       width: 400px;
       height: 400px;
+    }
+  }
+
+  @include vp-max(1000) {}
+
+  @include xl-max {
+    .heroContent {
+      height: 100vh;
     }
 
     .heroSub {
