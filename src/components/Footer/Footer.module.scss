@@ -32,6 +32,7 @@
     a {
       color: $creme;
       font-size: 20px;
+      font-weight: 500;
       line-height: 34px;
       opacity: .25;
       transition: .25s ease;
@@ -57,10 +58,11 @@
 
   .nameMark {
     color: $creme;
-    font-family: $title;
+    font-family: $name;
     font-size: 25px;
     font-weight: bold;
     line-height: 1;
+    text-align: center;
     opacity: .25;
 
     span {
