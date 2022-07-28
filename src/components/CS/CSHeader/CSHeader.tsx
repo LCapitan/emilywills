@@ -10,17 +10,18 @@ import styles from './CSHeader.module.scss'
 
 // props
 interface CSHeaderProps {
-  title: string,
+  title: string;
   // tags: Array<string>,
-  overview: string,
-  forWhat?: string,
-  timeline?: string,
-  tools?: Array<string>,
-  roles?: Array<string>,
-  btnUrl?: string,
-  process?: boolean
-  sections?: Array<string>,
-  csTitle?: string
+  overview: string;
+  forWhat?: string;
+  timeline?: string;
+  tools?: Array<string>;
+  roles?: Array<string>;
+  btnUrl?: string;
+  process?: boolean;
+  sections?: Array<string>;
+  csTitle?: string;
+  label?: string;
 }
 export function CSHeader({
   title,
@@ -34,7 +35,8 @@ export function CSHeader({
   btnUrl,
   process,
   sections,
-  csTitle
+  csTitle,
+  label = "View process"
 }: CSHeaderProps) {
   return (
     <>
@@ -109,7 +111,7 @@ export function CSHeader({
                     <Button
                       arrow
                       url={btnUrl}
-                      label='View process'
+                      label={label}
                     />
                   </div>
                 }

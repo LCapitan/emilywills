@@ -68,6 +68,8 @@ export function HonsBunsContent() {
             'Social Media'
           ]}
           overview="A collection of 10,000 unique, bunny-themed, NFTs, minting on Ethereum."
+          btnUrl='https://www.honsbuns.com/'
+          label='visit Hon&#39;s Buns'
         />
 
         <div id="top" className={styles.csWrapper}>
@@ -85,7 +87,7 @@ export function HonsBunsContent() {
             <CSFooter />
           </div>
         </div>
-      </div>
+      </div >
     </>
   )
 }
