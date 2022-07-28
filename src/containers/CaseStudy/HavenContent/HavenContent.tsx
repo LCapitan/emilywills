@@ -6,9 +6,7 @@ import {
   CSHero,
   CSFooter,
   CSHeader,
-  Button,
-  ContentBlock,
-  VideoPlayer
+  Button
 } from '../../../components/index';
 import { Content } from './Content';
 
