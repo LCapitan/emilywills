@@ -11,9 +11,9 @@ import {
 import { Content } from './Content';
 
 // styles
-import styles from '../CaseStudy.module.scss';
+import styles from '../Process.module.scss';
 
-export function PrideContent() {
+export function HavenProcess() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const heroRef = useRef<HTMLDivElement | null>(null);
   const [heroHeight, setHeroHeight] = useState(0);
@@ -56,38 +56,34 @@ export function PrideContent() {
       <Button backButton className={cx(isSticky ? '' : 'showBackButton')} />
 
       <CSHeader
-        rightRail
-        title='3M Pride'
-        overview='Uplifting the voices of the LGBTQ+ community.'
-        forWhat='Client Work'
-        timeline='3 Weeks'
-        tools={[
-          'Figma',
-          'Illustrator',
-          'Photoshop'
+        process
+        title='Haven Process'
+        overview='Creating fashion-forward, wearable technology that provides personal safety and peace of mind for young women.'
+        sections={[
+          'empathize',
+          'define',
+          'ideation',
+          'design',
+          'prototype',
+          'testing'
         ]}
-        roles={[
-          'Branding',
-          'UX/UI',
-          'Social Media'
-        ]}
+        csTitle="haven"
       />
 
       <div id="top" className={styles.csWrapper}>
         <div ref={heroRef} className={styles.stickyref}></div>
 
         <div ref={heroHeightRef} className={isSticky ? 'unStuckHero' : 'stuckHero'}>
-          <CSHero imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1651867850/PrideBooth_WallPrompt_yyqohf.jpg' />
+          <CSHero imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659411104/haven-process-hero_fyelnn.jpg' />
         </div>
 
         <div className={styles.stickySpacer} style={{ marginTop: isSticky ? '0' : heroHeight }}></div>
-
         <div className={styles.blockWrapper}>
           <Content />
 
           <CSFooter />
         </div>
-      </div >
+      </div>
     </>
   )
 }

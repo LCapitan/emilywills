@@ -38,13 +38,11 @@ export function Content() {
       />
 
       <KeyFeature
-        bgBeige
         flipped
-        title='Haven'
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658981536/watch-outline_vdq5g0.png'
-        width='406'
-        height='595'
-        altText=''
+        title="Haven"
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659410896/watch_cxatxp.png'
+        width='643'
+        height='920'
       >
         <p>Through wearable technology and a distinct understanding of our market, Haven&#39;s goal is to provide safety and peace of mind at times you need it most. Haven is inconspicuous and fashion forward, while providing a faster connection to responders in the case of an emergency.</p>
 
