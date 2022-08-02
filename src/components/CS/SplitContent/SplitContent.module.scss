@@ -4,7 +4,7 @@
 .splitContent {
   background: rgba($olive, .75);
   overflow: hidden;
-  padding-top: 75px;
+  padding-top: 100px;
 
   .inner {
     display: flex;
@@ -21,6 +21,7 @@
 
   .details {
     flex: 1;
+    padding-bottom: 75px;
 
     .wrapper {
       padding-left: 75px;
