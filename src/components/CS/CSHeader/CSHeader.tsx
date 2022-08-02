@@ -164,7 +164,7 @@ export function CSHeader({
                     {forWhat &&
                       <div className={styles.rightRailItem}>
                         <span className={styles.itemTitle}>For</span>
-                        <span>{forWhat},</span>
+                        <span>{forWhat}</span>
                       </div>
                     }
                   </div>
@@ -175,7 +175,7 @@ export function CSHeader({
                       <span className={styles.itemTitle}>Team</span>
                       <div className={styles.teamNames}>
                         {teams && teams.map((team, i) =>
-                          <span key={teams[i]}>{team}</span>
+                          <span key={teams[i]}>{team},</span>
                         )}
                       </div>
                     </div>
