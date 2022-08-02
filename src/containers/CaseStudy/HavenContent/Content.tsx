@@ -29,9 +29,9 @@ export function Content() {
       </ContentBlock>
 
       <FullWidthContent
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658981330/Haven_phone_screens_leaoej.png'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659402371/Haven_phone_screens_pcijgs.png'
         width='1200'
-        height='2040'
+        height='1993'
         altText='a screenshot of the Eve profile page'
         title='The Opportunity'
         content='Create a product that provides a faster, safer, and more reliable solution that protects women, giving them peace of mind throughout their daily lives.'
