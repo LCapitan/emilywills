@@ -2,6 +2,7 @@
 import {
   ContentBlock,
   FullWidthContent,
+  FullWidthImage,
   MoodBoard,
   SectionHeading
 } from '../../../components/index';
@@ -22,9 +23,9 @@ export function Content() {
       <ContentBlock
         tag="Primary &amp; Secondary"
         title="Research"
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658460425/Research_Image_zxgvam.png'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659460986/haven-research_jna2uf.jpg'
         width='1200'
-        height='453'
+        height='601'
       >
         <p>I filled out the lean canvas model to get to the heart of my idea. This helped me organize my thinking and what I wanted my business to accomplish, the user needs I wanted my solution to address, identifying who I am solving for and what competitive advantages my business has over current solutions that exist in the market.</p>
       </ContentBlock>
@@ -33,9 +34,9 @@ export function Content() {
         row
         tag="Initial Findings"
         title="User Interviews"
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658460832/user-interviews-img_rmf91c.png'
-        width='593'
-        height='585'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659461149/haven-user-interviews_mahyxw.png'
+        width='579'
+        height='432'
         captionTitle='Survey Pool:'
         caption='382 students between the ages of 15-24 years old were surveyed  '
       >
@@ -47,27 +48,48 @@ export function Content() {
       <ContentBlock
         tag="Early Adopters"
         title="User Journey"
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658463096/Eve_User_Journey_qxwfvt.png'
-        width='1363'
-        height='696'
       >
         <p>We created user journeys that highlight important scenarios and how a user might use the key features that Haven offers in these scenarios. Below are the journeys of user onboarding and set up of Haven, user accidentally triggering a false alarm, and user finding themselves in an actual emergency.</p>
       </ContentBlock>
+
+      <FullWidthImage
+        contained
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659461293/haven-uj-1_z93ysp.png'
+        imgAlt=''
+      />
+
+      <FullWidthImage
+        contained
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659461293/haven-uj-2_p6oguz.png'
+        imgAlt=''
+      />
+
+      <FullWidthImage
+        contained
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659461293/haven-uj-3_gbeh1h.png'
+        imgAlt=''
+      />
+
+      <FullWidthImage
+        contained
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659461293/haven-uj-4_vmjjm9.png'
+        imgAlt=''
+      />
 
       <SectionHeading id="design" title='Design' />
 
       <FullWidthContent
         flipped
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658464585/wireframes_sb2n3c.png'
-        width='1285'
-        height='1533'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659488883/haven-screens_e5mfvz.png'
+        width='1574'
+        height='3053'
         altText=''
         title='Wireframes'
         content={<p>Using mid-fidelity wireframes, I created a skeleton of how I wanted the app to look and feel while highlighting the most important features. I focused on simplicity and minimalism which is essential for a safety app where every second counts.</p>}
       />
 
       <MoodBoard
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658468626/moodboard_akdkyt.jpg'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659488976/inspo_hohegc.png'
         width='1728'
         height='910'
         altText=''
@@ -75,25 +97,26 @@ export function Content() {
         content='I gathered product design inspiration for the Haven watch studying wearbles and sleek jewelry fashion trends. I gathered inspiration for Haven&#39;s app by looking at current safety apps that exist and brands in the safety and tech space.'
       />
 
-      <FullWidthContent
-        moreText
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658469661/branding_fd7yrr.png'
-        width='2410'
-        height='3025'
+      <ContentBlock
+        row
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659489721/black-watch_ng6cts.png'
+        width='711'
+        height='657'
         altText=''
         title='Branding &amp; Design'
-        content={<><p>The name Eve, by definition, means “before” and “in preparation of” an event or period of time. With a focus on pre-planning for end-of-life and encouraging greener practices, I saw this name as a perfect fit to advocate for sustainability in the eve of death.</p><p>Eve&#39;s design system was carefully crafted in order to reflect its values of sustainability while also prioritizing being approachable to users. It was important that Eve as a brand evoked a sense of calm and peace of mind to users to offset the uncomfortable and heavy subject of death, and this is seen throughout the colors, symbols, and visuals that Eve uses across its platform.</p></>}
-      />
+      >
+        <p>I gathered product design inspiration for the Haven watch by studying wearbles, sleek jewelry fashion trends, and gathering user research. Haven&#39;s app was inspired by looking at current safety apps that exist and brands in the safety and tech space.</p>
+      </ContentBlock>
 
       <div id="testing"></div>
       <SectionHeading id="prototype" title='Prototype &amp; Testing' />
 
       <ContentBlock
         tag="Prototype"
-        title="Eve Prototype Launch"
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658471407/prototype_omcysg.png'
-        width='3456'
-        height='1420'
+        title="Haven App Launch"
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659489791/haven-prototype_jeaojm.jpg'
+        width='1200'
+        height='1186'
       >
         <p>After creating high fidelity screens of the features I wanted to highlight, I prototyped the ideal user flows for the platform. I then reached back out to users I initially interviewed for feedback on my design and solution and any revisions that needed to be made for improvement.</p>
       </ContentBlock>
@@ -102,15 +125,13 @@ export function Content() {
         row
         tag="Prototype"
         title="User Testing &amp; Feedback"
-        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1658470532/user-testing_v94lne.png'
+        imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1659490266/user-feedback_yzuoga.png'
         width='593'
-        height='492'
+        height='456'
         captionTitle='User Interview:'
-        caption='Ashley (she/her), Death Doula &amp; Educator *Facial mask was worn during this interview as a reminder of the importance of self care, especially in this industry*'
+        caption='Students at Virginia Tech, between the ages of 18-24 years old, testing out the Haven Watch Prototype'
       >
-        <p>I walked through the prototype with those I initially talked to who had recently lost a loved one along with people who work in the industry (funeral directors, morticians, and death doulas). I also did testing with people who were just hearing of Eve for the first time.</p>
-
-        <p>I recieved constructive feedback that I&#39;ve used towards improving Eve&#39;s platform and overall experience for users as well as validation that this is a product that is desperately needed. I hope to one day make this product a reality. </p>
+        <p>I walked through the app prototype as well as well as the 3D prototype, collecting user feedback on the design, functionality, and usability of both. All of the feedback I recieved was helpful in validating the need that exists in the market for a solution such as Haven.</p>
       </ContentBlock>
     </>
   )

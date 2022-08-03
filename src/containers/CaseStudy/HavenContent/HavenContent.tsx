@@ -80,7 +80,7 @@ export function HavenContent() {
             'Annie Balint (ST)',
             'Nikki Norris (ID)'
           ]}
-        // btnUrl="/work/haven/process"
+          btnUrl="/work/haven/process"
         />
 
         <div id="top" className={styles.csWrapper}>
