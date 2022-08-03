@@ -401,15 +401,23 @@
 }
 
 @include md-max {
-  .caseStudyHeader {
-    padding: 120px 0 55px;
-    height: auto;
-    position: relative;
-  }
-
   .container {
     &.process {
       padding-bottom: 100px;
+
+      .caseStudyHeader {
+        padding: 120px 0 55px;
+        height: auto;
+        position: relative;
+      }
+    }
+  }
+}
+
+@include sm-max {
+  .container {
+    &.process {
+      padding-bottom: 50px;
     }
   }
 }
