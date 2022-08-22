@@ -89,6 +89,26 @@ export function MobileContent() {
           <li className={cx(styles.workPiece)}>
             <div>
               <WorkCard
+                imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649404956/3m_ogowpq.png"
+                imgAlt="a photo of 3M creating their post it note mural"
+                cardLink="/work/3m-pride"
+              />
+              <WorkDetails
+                classes={cx(styles.workDetails)}
+                title="3M Pride"
+                subTitle="3M partners with twin cities pride festival"
+                tags={[
+                  'ui/ux',
+                  'environmental design'
+                ]}
+                url="/work/3m-pride"
+                label="view project"
+              />
+            </div>
+          </li>
+          <li className={cx(styles.workPiece)}>
+            <div>
+              <WorkCard
                 imgSrc="https://res.cloudinary.com/austinmel/image/upload/v1649267493/rvabowls_yn3zpg.jpg"
                 imgAlt="a photo of an acai bowl from RVA Bowls"
                 cardLink="/work/rvabowls"
