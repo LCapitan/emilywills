@@ -4,7 +4,7 @@ import React from "react";
 import { ContentBlock } from "../../components";
 
 // styles
-import styles from './IntroContent.module.scss';
+import styles from "./IntroContent.module.scss";
 
 export function IntroContent() {
   return (
@@ -18,8 +18,16 @@ export function IntroContent() {
       label="more about me"
       url="/about"
     >
-      <em className="quote">&#34;Leave everything and everyone better than you found them. The rest will work itself out.&#34;</em>
-      <p>As a designer, entrepreneur, and empath studying Experience Design at the VCU Brandcenter, I am passionate about solving problems, removing barriers, creating meaningful solutions, and disrupting for good. Oh- and cute bunnies. Can&#39;t forget about the bunnies.</p>
+      <em className="quote">
+        &#34;Leave everything and everyone better than you found them. The rest
+        will work itself out.&#34;
+      </em>
+      <p>
+        As a designer, entrepreneur, and empath studying Experience Design at
+        the VCU Brandcenter, I am passionate about solving problems, removing
+        barriers, creating meaningful solutions, and disrupting for good. Oh-
+        and cute bunnies. Can&#39;t forget about the bunnies.
+      </p>
     </ContentBlock>
   );
 }

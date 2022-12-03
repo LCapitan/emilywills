@@ -3,16 +3,18 @@ import Image from "next/image";
 import cx from "classnames";
 
 // components
-import { Button } from '../../Button';
+import { Button } from "../../Button";
 
 // styles
-import styles from './ContentBlock.module.scss'
+import styles from "./ContentBlock.module.scss";
 
 // props
 interface ContentBlockProps {
   title?: string;
   subtitle?: string;
-  children?: any;
+  quote?: string;
+  content?: any;
+  extraContent?: any;
   tag?: string;
   imgSrc?: string;
   width?: string;
@@ -24,13 +26,16 @@ interface ContentBlockProps {
   flipped?: boolean;
   url?: string;
   label?: string;
+  fullHeight?: boolean;
   className?: string;
 }
 
-export function ContentBlock({
+export default function ContentBlock({
   title,
   subtitle,
-  children,
+  quote,
+  content,
+  extraContent,
   tag,
   imgSrc,
   width,
@@ -42,38 +47,55 @@ export function ContentBlock({
   flipped,
   url,
   label,
-  className
+  fullHeight,
+  className,
 }: ContentBlockProps) {
-
   return (
     <div className="container">
-      <div className={cx(styles.contentBlock, !title && styles.noTitle, row && styles.split, flipped && styles.flipped, className && className)}>
+      <div
+        className={cx(
+          styles.contentBlock,
+          !title && styles.noTitle,
+          row && styles.split,
+          flipped && styles.flipped,
+          fullHeight && styles.fullHeight,
+          className && className
+        )}
+      >
         <div className={styles.details}>
           {tag && <span className={styles.tag}>{tag}</span>}
           {title && <h2 className={styles.title}>{title}</h2>}
           <div className={styles.content}>
             <h3>{subtitle}</h3>
-            {children}
+            {quote && <em className={styles.quote}>&#34;{quote}&#34;</em>}
+            {content && <p>{content}</p>}
+            {extraContent && <p>{extraContent}</p>}
           </div>
-          {url && <div className={styles.actions}>
-            <Button arrow url={url} label={label} />
-          </div>}
+          {url && (
+            <div className={styles.actions}>
+              <Button arrow url={url} label={label} />
+            </div>
+          )}
         </div>
 
-        {imgSrc &&
+        {imgSrc && (
           <figure className={styles.img}>
-            <Image src={imgSrc} width={width} height={height} alt={altText} layout="responsive" />
-            {caption &&
+            <Image
+              src={imgSrc}
+              width={width}
+              height={height}
+              alt={altText}
+              layout="responsive"
+            />
+            {caption && (
               <figcaption className={styles.caption}>
-                {captionTitle &&
-                  <strong>{captionTitle}&nbsp;</strong>
-                }
+                {captionTitle && <strong>{captionTitle}&nbsp;</strong>}
                 {caption}
               </figcaption>
-            }
+            )}
           </figure>
-        }
+        )}
       </div>
     </div>
-  )
+  );
 }

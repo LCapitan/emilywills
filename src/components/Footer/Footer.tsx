@@ -1,34 +1,52 @@
-import React from 'react';
+import React from "react";
 
 // components
-import { LinkedIn, Instagram, Twitter, Facebook } from '../Icons'
+import { LinkedIn, Instagram, Twitter, Facebook } from "../Icons";
 
 // styles
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
 
-export function Footer() {
+interface FooterProps {
+  linkedInUrl?: string;
+  instaUrl?: string;
+  twitterUrl?: string;
+  facebookUrl?: string;
+  contactEmail?: string;
+}
+
+export default function Footer({
+  linkedInUrl,
+  instaUrl,
+  twitterUrl,
+  facebookUrl,
+  contactEmail,
+}: FooterProps) {
   return (
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.inner}>
           <ul className={styles.socialMenu}>
             <li>
-              <a href="https://www.linkedin.com/in/emilyewills/">
+              <a href={linkedInUrl}>
+                {/* <a href="/"> */}
                 <LinkedIn />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/emmmywills/">
+              <a href={instaUrl}>
+                {/* <a href=""> */}
                 <Instagram />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/emmyy_wills">
+              <a href={twitterUrl}>
+                {/* <a href=""> */}
                 <Twitter />
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/emma.wills.52">
+              <a href={facebookUrl}>
+                {/* <a href=""> */}
                 <Facebook />
               </a>
             </li>
@@ -39,10 +57,12 @@ export function Footer() {
           </div>
 
           <div className={styles.contact}>
-            <div><a href="mailto:willsee@vcu.edu">get in touch</a></div>
+            <div>
+              <a href={"mailto:" + contactEmail}>get in touch</a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

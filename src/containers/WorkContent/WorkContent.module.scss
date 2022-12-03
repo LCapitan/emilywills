@@ -7,7 +7,6 @@
   justify-content: flex-end;
   padding: 50px 0 0;
   position: relative;
-  max-width: 1600px;
 
   .wrapper {
     position: fixed;
@@ -16,7 +15,7 @@
     width: 32%;
     z-index: 2;
 
-    .inner {
+    .detailList {
       position: relative;
     }
   }
@@ -26,15 +25,15 @@
     position: absolute;
     top: 75px;
     left: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
     z-index: -1;
 
     &.show {
       opacity: 1;
       top: 0;
       z-index: 90;
-      transition: .75s ease;
-      transition-delay: .25s;
+      transition: 0.75s ease;
+      transition-delay: 0.25s;
     }
   }
 
@@ -71,7 +70,6 @@
         .cardContainer {
           transform: scale(1.02) rotate(8deg);
         }
-
       }
 
       &:hover,
@@ -83,7 +81,7 @@
     }
   }
 
-  @include vp-max (1650) {
+  @include vp-max(1650) {
     max-width: 1400px;
 
     .workList {
@@ -91,14 +89,13 @@
     }
   }
 
-  @include vp-max (1500) {
-
+  @include vp-max(1500) {
     .workList {
       right: 0;
     }
   }
 
-  @include vp-max (1400) {
+  @include vp-max(1400) {
     max-width: 1200px;
 
     .workList {
@@ -121,7 +118,7 @@
         width: 100%;
 
         &:first-child {
-          padding-top: 0
+          padding-top: 0;
         }
 
         &.inView {
@@ -168,7 +165,7 @@
     .workList {
       .workPiece {
         &:first-child {
-          padding-top: 0
+          padding-top: 0;
         }
 
         &:last-child {

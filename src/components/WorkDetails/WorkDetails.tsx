@@ -1,56 +1,43 @@
 // components
-import { Button } from '../Button';
+import { Button } from "../Button";
 
 // styles
-import styles from './WorkDetails.module.scss';
+import styles from "./WorkDetails.module.scss";
 
 // props
 interface WorkDetailsProps {
   classes?: any;
   title: string;
-  subTitle: string;
+  subtitle: string;
   tags?: Array<string>;
   url: string;
   label?: string;
   secondary?: boolean;
 }
 
-export function WorkDetails({
+export default function WorkDetails({
   classes,
   title,
-  subTitle,
+  subtitle,
   tags,
   url,
   label,
-  secondary
+  secondary,
 }: WorkDetailsProps) {
-
   return (
-    <div className={classes}>
+    <div className={styles.workDetails}>
       <h1 className={styles.title}>{title}</h1>
-      <div className={styles.subtitle}>{subTitle}</div>
+      <div className={styles.subtitle}>{subtitle}</div>
       <div className={styles.actions}>
         {secondary ? (
-          <Button
-            arrow
-            secondary
-            url={url}
-            label={label}
-          />
+          <Button arrow secondary url={url} label={label} />
         ) : (
-          <Button
-            arrow
-            url={url}
-            label={label}
-          />
-        )
-        }
-      </div>
-      <div className={styles.tags}>
-        {tags && tags.map((tag, i) =>
-          <span key={tags[i]}>{tag}</span>
+          <Button arrow url={url} label={label} />
         )}
       </div>
+      <div className={styles.tags}>
+        {tags && tags.map((tag, i) => <span key={tags[i]}>{tag}</span>)}
+      </div>
     </div>
-  )
+  );
 }

@@ -1,19 +1,23 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
+import { Builder, BuilderComponent } from "@builder.io/react";
 
 // components
-import { Footer } from '../src/components/index';
-import { NoContent } from '../src/containers/index';
+import { NoContent } from "../src/containers/index";
+import Footer from "../src/components/Footer/Footer";
 
-const About: NextPage = () => {
+const NotFound: NextPage = () => {
+  if (Builder.isPreviewing || Builder.isEditing) {
+    return <BuilderComponent model="page" />;
+  }
+
   return (
     <>
-      {/* <Header/> */}
       <main>
         <NoContent />
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default About;
+export default NotFound;

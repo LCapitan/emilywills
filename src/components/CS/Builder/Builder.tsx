@@ -1,0 +1,41 @@
+import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
+import { useEffect, useState } from "react";
+
+// Put your API key here
+builder.init(c1b80d2fa81e4146ab6e58293a95c87e);
+
+// set whether you're using the Visual Editor,
+// whether there are changes,
+// and render the content if found
+export default function CatchAllRoute() {
+  const isPreviewingInBuilder = useIsPreviewing();
+  const [notFound, setNotFound] = useState(false);
+  const [content, setContent] = useState(null);
+
+  // get the page content from Builder
+  useEffect(() => {
+    async function fetchContent() {
+      const content = await builder
+        .get("page", {
+          url: window.location.pathname,
+        })
+        .promise();
+
+      setContent(content);
+      setNotFound(!content);
+    }
+    fetchContent();
+  }, []);
+  // if no page is found, return a 404 page
+  if (notFound && !isPreviewingInBuilder) {
+    return <div>Not Found 404 Error</div>;
+  }
+
+  // return the page when found
+  return (
+    <>
+      {/* Render the Builder page */}
+      <BuilderComponent model="page" content={content} />
+    </>
+  );
+}

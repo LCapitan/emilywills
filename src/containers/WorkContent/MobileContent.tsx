@@ -4,7 +4,7 @@ import cx from "classnames";
 import { WorkCard, WorkDetails } from "../../components";
 
 // styles
-import styles from './WorkContent.module.scss';
+import styles from "./WorkContent.module.scss";
 
 export function MobileContent() {
   return (
@@ -24,13 +24,13 @@ export function MobileContent() {
                 <WorkDetails
                   classes={cx(styles.workDetails)}
                   title="Eve"
-                  subTitle="A digital platform that makes the journey for death more approachable and sustainable."
+                  subtitle="A digital platform that makes the journey for death more approachable and sustainable."
                   tags={[
-                    'sustainability',
-                    'service design',
-                    'accessibility',
-                    'machine learning',
-                    'human-centered design'
+                    "sustainability",
+                    "service design",
+                    "accessibility",
+                    "machine learning",
+                    "human-centered design",
                   ]}
                   url="/work/eve-planning"
                   label="view case study"
@@ -48,13 +48,13 @@ export function MobileContent() {
               <WorkDetails
                 classes={cx(styles.workDetails)}
                 title="Haven"
-                subTitle="Wearable technology that provides personal safety and peace of mind for young women."
+                subtitle="Wearable technology that provides personal safety and peace of mind for young women."
                 tags={[
-                  'ui/ux',
-                  'product design',
-                  'branding',
-                  'strategy',
-                  'human-centered design'
+                  "ui/ux",
+                  "product design",
+                  "branding",
+                  "strategy",
+                  "human-centered design",
                 ]}
                 url="/work/haven"
                 label="view project"
@@ -71,15 +71,15 @@ export function MobileContent() {
               <WorkDetails
                 classes={cx(styles.workDetails)}
                 title="Hon&#39;s Buns"
-                subTitle="The baddest bunny-themed NFTs on the scene."
+                subtitle="The baddest bunny-themed NFTs on the scene."
                 tags={[
-                  'ui/ux',
-                  'web3',
-                  'crypto',
-                  'branding',
-                  'strategy',
-                  'illustration',
-                  'accessibility',
+                  "ui/ux",
+                  "web3",
+                  "crypto",
+                  "branding",
+                  "strategy",
+                  "illustration",
+                  "accessibility",
                 ]}
                 url="/work/honsbuns"
                 label="view project"
@@ -96,11 +96,8 @@ export function MobileContent() {
               <WorkDetails
                 classes={cx(styles.workDetails)}
                 title="3M Pride"
-                subTitle="3M partners with twin cities pride festival"
-                tags={[
-                  'ui/ux',
-                  'environmental design'
-                ]}
+                subtitle="3M partners with twin cities pride festival"
+                tags={["ui/ux", "environmental design"]}
                 url="/work/3m-pride"
                 label="view project"
               />
@@ -116,13 +113,13 @@ export function MobileContent() {
               <WorkDetails
                 classes={cx(styles.workDetails)}
                 title="RVA Bowls"
-                subTitle="A restaurant, studio, and art gallery that gives back to the local community."
+                subtitle="A restaurant, studio, and art gallery that gives back to the local community."
                 tags={[
-                  'ui/ux',
-                  'product design',
-                  'strategy',
-                  'branding',
-                  'web design'
+                  "ui/ux",
+                  "product design",
+                  "strategy",
+                  "branding",
+                  "web design",
                 ]}
                 url="/work/rvabowls"
                 label="view project"
@@ -132,5 +129,5 @@ export function MobileContent() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
