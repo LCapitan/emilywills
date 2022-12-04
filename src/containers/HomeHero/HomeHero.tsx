@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 // components
-import { Name } from '../../components';
+import { Name } from "../../components";
 
 // styles
-import styles from './HomeHero.module.scss'
+import styles from "./HomeHero.module.scss";
 
 export function HomeHero() {
   return (
@@ -18,7 +18,14 @@ export function HomeHero() {
       </h1>
       <div className={styles.heroContent}>
         <figure className={styles.image}>
-          <Image src="https://res.cloudinary.com/austinmel/image/upload/v1658544744/brown-bunny_rfztzt.png" alt="bunny" width="600" height="525" layout="fill" objectFit="cover" />
+          <Image
+            src="https://res.cloudinary.com/da0wdy90u/image/upload/v1670107839/portfolio/brown-bunny_rfztzt_lct4kc.png"
+            alt="bunny"
+            width="600"
+            height="525"
+            layout="fill"
+            objectFit="cover"
+          />
         </figure>
       </div>
       <div className={styles.heroSub}>

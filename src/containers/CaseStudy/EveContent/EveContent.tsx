@@ -1,17 +1,12 @@
 import cx from "classnames";
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
 
 // components
-import {
-  CSHero,
-  CSFooter,
-  CSHeader,
-  Button
-} from '../../../components/index';
-import { Content } from './Content'
+import { CSHero, CSFooter, CSHeader, Button } from "../../../components/index";
+import { Content } from "./Content";
 
 // styles
-import styles from '../CaseStudy.module.scss';
+import styles from "../CaseStudy.module.scss";
 
 export function EveContent() {
   const [isSticky, setIsSticky] = useState<boolean>(false);
@@ -20,27 +15,26 @@ export function EveContent() {
   const heroHeightRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const hero = heroRef?.current
+    const hero = heroRef?.current;
     const observer = new IntersectionObserver(
       ([e]) => {
-        setIsSticky(e.isIntersecting)
+        setIsSticky(e.isIntersecting);
       },
       {
-        threshold: [0, 1]
+        threshold: [0, 1],
       }
-    )
+    );
 
     if (hero) {
-      observer.observe(hero)
+      observer.observe(hero);
     }
 
-    return (() => {
+    return () => {
       if (hero) {
-        observer.unobserve(hero)
+        observer.unobserve(hero);
       }
-    })
-
-  }, [heroRef])
+    };
+  }, [heroRef]);
 
   useEffect(() => {
     function handleResize() {
@@ -51,35 +45,30 @@ export function EveContent() {
 
     if (heroHeightRef?.current?.clientHeight) {
       setHeroHeight(heroHeightRef.current.clientHeight);
-      window.addEventListener('resize', handleResize);
+      window.addEventListener("resize", handleResize);
       // console.log('height: ', heroHeightRef.current.clientHeight);
       // console.log('width: ', heroHeightRef.current.clientWidth);
-      return () => window.removeEventListener('resize', handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
   return (
     <>
-      <Button backButton className={cx(isSticky ? '' : 'showBackButton')} />
+      <Button backButton className={cx(isSticky ? "" : "showBackButton")} />
 
       <CSHeader
         rightRail
-        title='Eve Planning'
-        overview='Eve is a digital platform designed to make planning for death easier on you, your loved ones, and the earth.'
-        forWhat='Independent Project'
-        timeline='16 Weeks'
-        tools={[
-          'Figma',
-          'Illustrator',
-          'Photoshop',
-          'After Effects'
-        ]}
+        title="Eve Planning"
+        overview="Eve is a digital platform designed to make planning for death easier on you, your loved ones, and the earth."
+        forWhat="Independent Project"
+        timeline="16 Weeks"
+        tools={["Figma", "Illustrator", "Photoshop", "After Effects"]}
         roles={[
-          'User Research',
-          'Strategy',
-          'Branding',
-          'UX/UI',
-          'Product Design'
+          "User Research",
+          "Strategy",
+          "Branding",
+          "UX/UI",
+          "Product Design",
         ]}
         btnUrl="/work/eve-planning/process"
       />
@@ -87,18 +76,24 @@ export function EveContent() {
       <div id="top" className={styles.csWrapper}>
         <div ref={heroRef} className={styles.stickyref}></div>
 
-        <div ref={heroHeightRef} className={isSticky ? 'unStuckHero' : 'stuckHero'}>
-          <CSHero imgSrc='https://res.cloudinary.com/austinmel/image/upload/v1657846173/eve-hero_hebnjj.png' />
+        <div
+          ref={heroHeightRef}
+          className={isSticky ? "unStuckHero" : "stuckHero"}
+        >
+          <CSHero imgSrc="https://res.cloudinary.com/da0wdy90u/image/upload/v1670107840/portfolio/eve-hero_hebnjj_lxypol.png" />
         </div>
 
-        <div className={styles.stickySpacer} style={{ marginTop: isSticky ? '0' : heroHeight }}></div>
+        <div
+          className={styles.stickySpacer}
+          style={{ marginTop: isSticky ? "0" : heroHeight }}
+        ></div>
 
         <div className={styles.blockWrapper}>
           <Content />
 
-          <CSFooter processUrl='/work/eve-planning/process' />
+          <CSFooter processUrl="/work/eve-planning/process" />
         </div>
       </div>
     </>
-  )
+  );
 }
